@@ -26,6 +26,7 @@ Tracker:AddItems("items/events.json")
 -- Maps
 Tracker:AddMaps("maps/maps.json")
 Tracker:AddMaps("maps/maps_boulder_vanilla.json")
+Tracker:AddMaps("maps/maps_extrakey_vanilla.json")
    
 -- Locations
 Tracker:AddLocations("locations/locations.json")
@@ -59,6 +60,8 @@ ScriptHost:AddWatchForCode("colormap", "colormap", toggle_grayscale)
 ScriptHost:AddWatchForCode("colormap2", "colormap", toggle_boulders)
 ScriptHost:AddWatchForCode("splitmap", "splitmap", toggle_splitmap)
 ScriptHost:AddWatchForCode("opt_extra_boulders", "opt_extra_boulders", toggle_boulders)
+ScriptHost:AddWatchForCode("colormap3", "colormap", toggle_extra_key_items)
+ScriptHost:AddWatchForCode("opt_extra_key_items2", "opt_extra_key_items", toggle_extra_key_items)
 
 initialize_watch_items()
 

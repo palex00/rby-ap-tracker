@@ -312,6 +312,23 @@ function toggle_boulders()
     end
 end
 
+function toggle_extra_key_items()
+    local extra_key = Tracker:FindObjectForCode("opt_extra_key_items").CurrentStage == 1
+    local bw = Tracker:FindObjectForCode("colormap").CurrentStage == 1
+
+    if not bw and not extra_key then
+        Tracker:AddMaps("maps/maps_extrakey_vanilla.json")
+    elseif bw and not extra_key then
+        Tracker:AddMaps("maps/maps_bw_extrakey_vanilla.json")
+    elseif not bw and extra_key then
+        Tracker:AddMaps("maps/maps_extrakey.json")
+    elseif bw and extra_key then
+        Tracker:AddMaps("maps/maps_bw_extrakey.json")
+    else
+        print("Oh Oh.")
+    end
+end
+
 function toggle_splitmap()
     local off = Tracker:FindObjectForCode("splitmap").CurrentStage == 0
     local on = Tracker:FindObjectForCode("splitmap").CurrentStage == 1
