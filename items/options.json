@@ -1280,11 +1280,27 @@
         "type": "progressive",
         "loop": true,
         "allow_disabled": false,
+        "initial_stage_idx": 1,
         "stages": [
             {
-                "name": "Auto-Track Map - On",
+                "name": "Auto-Track Map - All",
                 "img": "/images/options/automap.png",
-                "codes": "automap, automap_on",
+                "img_mods": "overlay|images/options/overlays/all.png",
+                "codes": "automap, automap_all",
+                "inherit_codes": false
+            },
+            {
+                "name": "Auto-Track Map - Most",
+                "img": "/images/options/automap.png",
+                "img_mods": "overlay|images/options/overlays/most.png",
+                "codes": "automap, automap_most",
+                "inherit_codes": false
+            },
+            {
+                "name": "Auto-Track Map - Minimal",
+                "img": "/images/options/automap.png",
+                "img_mods": "overlay|images/options/overlays/minimal.png",
+                "codes": "automap, automap_minimum",
                 "inherit_codes": false
             },
             {

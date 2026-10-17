@@ -41,9 +41,9 @@ IGNORED_CODES = {
     v5_update = "",
     death_link = "",
     warp_tile_shuffle = "",
-    door_shuffle = "",
     
     -- Special handling for these
+    door_shuffle = "",
     old_man = "",
     elite_four_pokedex_condition = "",
     elite_four_key_items_condition = "",
@@ -160,5 +160,9 @@ function get_slot_options(slot_data)
 		else
 			Tracker:FindObjectForCode('opt_blind_trainers').CurrentStage = 0
 		end
+	end
+
+	if slot_data["door_shuffle"] and slot_data["door_shuffle"] > 0 then
+		Tracker:FindObjectForCode('automap').CurrentStage = 0
 	end
 end
