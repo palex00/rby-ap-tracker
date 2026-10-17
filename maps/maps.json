@@ -211,7 +211,6 @@
 {"name": "ssannebow", "location_size": 12, "location_border_thickness": 1, "img": "images/maps/sgb/SSAnneBow.png"},
 {"name": "ssannecaptainsroom", "location_size": 12, "location_border_thickness": 1, "img": "images/maps/sgb/SSAnneCaptainsRoom.png"},
 {"name": "ssannekitchen", "location_size": 12, "location_border_thickness": 1, "img": "images/maps/sgb/SSAnneKitchen.png"},
-{"name": "tradecenter", "location_size": 12, "location_border_thickness": 1, "img": "images/maps/sgb/TradeCenter.png"},
 {"name": "undergroundpathnorthsouth", "location_size": 12, "location_border_thickness": 1, "img": "images/maps/sgb/UndergroundPathNorthSouth.png"},
 {"name": "undergroundpathroute5", "location_size": 12, "location_border_thickness": 1, "img": "images/maps/sgb/UndergroundPathRoute5.png"},
 {"name": "undergroundpathroute6", "location_size": 12, "location_border_thickness": 1, "img": "images/maps/sgb/UndergroundPathRoute6.png"},

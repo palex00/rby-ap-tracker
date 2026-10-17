@@ -10,9 +10,61 @@
                         {
                             "title": "Pallet Town",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "pallettown"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Town",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "pallettown"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Red's House",
+                                        "content": {
+                                            "type": "tabbed",
+                                            "tabs": [
+                                                {
+                                                    "title": "1F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "redshouse1f"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "2F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "redshouse2f"
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Blue's House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "blueshouse"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Oak's Lab",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "oakslab"
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         },
@@ -36,6 +88,42 @@
                                             "type": "map",
                                             "maps": [
                                                 "viridiangym"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Pokémon Center",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "viridianpokecenter"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Mart",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "viridianmart"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Trainers' School",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "viridianschoolhouse"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Nickname House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "viridiannicknamehouse"
                                             ]
                                         }
                                     }
@@ -62,6 +150,68 @@
                                             "type": "map",
                                             "maps": [
                                                 "pewtergym"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Museum",
+                                        "content": {
+                                            "type": "tabbed",
+                                            "tabs": [
+                                                {
+                                                    "title": "1F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "museum1f"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "2F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "museum2f"
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Pokémon Center",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "pewterpokecenter"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Mart",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "pewtermart"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Nidoran House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "pewternidoranhouse"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Other House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "pewterspeechhouse"
                                             ]
                                         }
                                     }
@@ -125,6 +275,60 @@
                                                 }
                                             ]
                                         }
+                                    },
+                                    {
+                                        "title": "Pokémon Center",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "ceruleanpokecenter"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Mart",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "ceruleanmart"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Bike Shop",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "bikeshop"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Badge House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "ceruleanbadgehouse"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Trade House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "ceruleantradehouse"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Trashed House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "ceruleantrashedhouse"
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -169,18 +373,133 @@
                                                 {
                                                     "title": "1F",
                                                     "content": {
-                                                        "type": "map",
-                                                        "maps": [
-                                                            "ssanne1f"
+                                                        "type": "tabbed",
+                                                        "tabs": [
+                                                            {
+                                                                "title": "Hall",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanne1f"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Room 1",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanne1fgentlemansroom1"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Room 2",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanne1fgentlemansroom2"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Room 3",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanne1fgentlemansroom3"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Room 4",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanne1fgentlemansroom4"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Room 5",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanne1fgentlemansroom5"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Room 6",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanne1fgentlemansroom6"
+                                                                    ]
+                                                                }
+                                                            }
                                                         ]
                                                     }
                                                 },
                                                 {
                                                     "title": "B1F",
                                                     "content": {
-                                                        "type": "map",
-                                                        "maps": [
-                                                            "ssanneb1f"
+                                                        "type": "tabbed",
+                                                        "tabs": [
+                                                            {
+                                                                "title": "Hall",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanneb1f"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Room 1",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanneb1fsailorfishermansroom1"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Room 2",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanneb1fsailorfishermansroom2"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Room 3",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanneb1fsailorfishermansroom3"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Room 4",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanneb1fsailorfishermansroom4"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Room 5",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanneb1fsailorfishermansroom5"
+                                                                    ]
+                                                                }
+                                                            }
                                                         ]
                                                     }
                                                 },
@@ -196,9 +515,71 @@
                                                 {
                                                     "title": "2F",
                                                     "content": {
-                                                        "type": "map",
-                                                        "maps": [
-                                                            "ssanne2f"
+                                                        "type": "tabbed",
+                                                        "tabs": [
+                                                            {
+                                                                "title": "Hall",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanne2f"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Room 1",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanne2fgentlemansroom1"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Room 2",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanne2fgentlemansroom2"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Room 3",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanne2fgentlemansroom3"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Room 4",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanne2fgentlemansroom4"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Room 5",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanne2fgentlemansroom5"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Room 6",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "ssanne2fgentlemansroom6"
+                                                                    ]
+                                                                }
+                                                            }
                                                         ]
                                                     }
                                                 },
@@ -229,6 +610,60 @@
                                                         ]
                                                     }
                                                 }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Pokémon Center",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "vermilionpokecenter"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Mart",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "vermilionmart"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Fan Club",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "pokemonfanclub"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Old Rod House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "vermilionoldrodhouse"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Pidgey House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "vermilionpidgeyhouse"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Trade House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "vermiliontradehouse"
                                             ]
                                         }
                                     }
@@ -319,6 +754,51 @@
                                                 }
                                             ]
                                         }
+                                    },
+                                    {
+                                        "title": "Pokémon Center",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "lavenderpokecenter"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Mart",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "lavendermart"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Mr. Fuji's House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "mrfujishouse"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Cubone House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "lavendercubonehouse"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Name Rater's House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "nameratershouse"
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -352,6 +832,15 @@
                                             "type": "map",
                                             "maps": [
                                                 "gamecorner"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Prize Room",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "gamecornerprizeroom"
                                             ]
                                         }
                                     },
@@ -395,7 +884,176 @@
                                                             "rockethideoutb4f"
                                                         ]
                                                     }
+                                                },
+                                                {
+                                                    "title": "Elevator",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "rockethideoutelevator"
+                                                        ]
+                                                    }
                                                 }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Pokémon Center",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "celadonpokecenter"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Dept. Store",
+                                        "content": {
+                                            "type": "tabbed",
+                                            "tabs": [
+                                                {
+                                                    "title": "1F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "celadonmart1f"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "2F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "celadonmart2f"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "3F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "celadonmart3f"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "4F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "celadonmart4f"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "5F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "celadonmart5f"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "Roof",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "celadonmartroof"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "Elevator",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "celadonmartelevator"
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Mansion",
+                                        "content": {
+                                            "type": "tabbed",
+                                            "tabs": [
+                                                {
+                                                    "title": "1F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "celadonmansion1f"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "2F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "celadonmansion2f"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "3F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "celadonmansion3f"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "Roof",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "celadonmansionroof"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "Roof House",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "celadonmansionroofhouse"
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Diner",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "celadondiner"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Hotel",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "celadonhotel"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Chief's House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "celadonchiefhouse"
                                             ]
                                         }
                                     }
@@ -537,6 +1195,77 @@
                                                             "silphco11f"
                                                         ]
                                                     }
+                                                },
+                                                {
+                                                    "title": "Elevator",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "silphcoelevator"
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Pokémon Center",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "saffronpokecenter"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Mart",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "saffronmart"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Mr. Psychic's House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "mrpsychicshouse"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Pidgey House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "saffronpidgeyhouse"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Copycat's House",
+                                        "content": {
+                                            "type": "tabbed",
+                                            "tabs": [
+                                                {
+                                                    "title": "1F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "copycatshouse1f"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "2F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "copycatshouse2f"
+                                                        ]
+                                                    }
                                                 }
                                             ]
                                         }
@@ -573,41 +1302,181 @@
                                             "type": "tabbed",
                                             "tabs": [
                                                 {
-                                                    "title": "Center",
+                                                    "title": "Gate",
                                                     "content": {
                                                         "type": "map",
                                                         "maps": [
-                                                            "safarizonecenter"
+                                                            "safarizonegate"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "Center",
+                                                    "content": {
+                                                        "type": "tabbed",
+                                                        "tabs": [
+                                                            {
+                                                                "title": "Area",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "safarizonecenter"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Rest House",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "safarizonecenterresthouse"
+                                                                    ]
+                                                                }
+                                                            }
                                                         ]
                                                     }
                                                 },
                                                 {
                                                     "title": "East",
                                                     "content": {
-                                                        "type": "map",
-                                                        "maps": [
-                                                            "safarizoneeast"
+                                                        "type": "tabbed",
+                                                        "tabs": [
+                                                            {
+                                                                "title": "Area",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "safarizoneeast"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Rest House",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "safarizoneeastresthouse"
+                                                                    ]
+                                                                }
+                                                            }
                                                         ]
                                                     }
                                                 },
                                                 {
                                                     "title": "North",
                                                     "content": {
-                                                        "type": "map",
-                                                        "maps": [
-                                                            "safarizonenorth"
+                                                        "type": "tabbed",
+                                                        "tabs": [
+                                                            {
+                                                                "title": "Area",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "safarizonenorth"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Rest House",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "safarizonenorthresthouse"
+                                                                    ]
+                                                                }
+                                                            }
                                                         ]
                                                     }
                                                 },
                                                 {
                                                     "title": "West",
                                                     "content": {
+                                                        "type": "tabbed",
+                                                        "tabs": [
+                                                            {
+                                                                "title": "Area",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "safarizonewest"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "title": "Rest House",
+                                                                "content": {
+                                                                    "type": "map",
+                                                                    "maps": [
+                                                                        "safarizonewestresthouse"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "Secret House",
+                                                    "content": {
                                                         "type": "map",
                                                         "maps": [
-                                                            "safarizonewest"
+                                                            "safarizonesecrethouse"
                                                         ]
                                                     }
                                                 }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Pokémon Center",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "fuchsiapokecenter"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Mart",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "fuchsiamart"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Warden's House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "wardenshouse"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Meeting Room",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "fuchsiameetingroom"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Good Rod House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "fuchsiagoodrodhouse"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Bill's Grandpa's House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "fuchsiabillsgrandpashouse"
                                             ]
                                         }
                                     }
@@ -724,6 +1593,24 @@
                                                 }
                                             ]
                                         }
+                                    },
+                                    {
+                                        "title": "Pokémon Center",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "cinnabarpokecenter"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Mart",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "cinnabarmart"
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -731,9 +1618,80 @@
                         {
                             "title": "Indigo Plateau",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "indigoplateau"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Plateau",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "indigoplateau"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Lobby",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "indigoplateaulobby"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Lorelei's Room",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "loreleisroom"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Bruno's Room",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "brunosroom"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Agatha's Room",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "agathasroom"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Lance's Room",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "lancesroom"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Champion's Room",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "championsroom"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Hall of Fame",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "halloffame"
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         }
@@ -757,10 +1715,36 @@
                         {
                             "title": "Route 2",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "route2_bottom",
-                                    "route2_top"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Route",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route2_bottom",
+                                                "route2_top"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Gate",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route2gate"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Trade House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route2tradehouse"
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         },
@@ -776,45 +1760,139 @@
                         {
                             "title": "Route 4",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "route4"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Route",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route4"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Pokémon Center",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "mtmoonpokecenter"
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         },
                         {
                             "title": "Route 5",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "route5"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Route",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route5"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Gate",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route5gate"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Day Care",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "daycare"
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         },
                         {
                             "title": "Route 6",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "route6"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Route",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route6"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Gate",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route6gate"
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         },
                         {
                             "title": "Route 7",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "route7"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Route",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route7"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Gate",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route7gate"
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         },
                         {
                             "title": "Route 8",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "route8"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Route",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route8"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Gate",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route8gate"
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         },
@@ -830,28 +1908,122 @@
                         {
                             "title": "Route 10",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "route10"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Route",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route10"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Pokémon Center",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "rocktunnelpokecenter"
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         },
                         {
                             "title": "Route 11",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "route11"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Route",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route11"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Gate",
+                                        "content": {
+                                            "type": "tabbed",
+                                            "tabs": [
+                                                {
+                                                    "title": "1F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "route11gate1f"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "2F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "route11gate2f"
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         },
                         {
                             "title": "Route 12",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "route12_top",
-                                    "route12_bottom"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Route",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route12_top",
+                                                "route12_bottom"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Gate",
+                                        "content": {
+                                            "type": "tabbed",
+                                            "tabs": [
+                                                {
+                                                    "title": "1F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "route12gate1f"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "2F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "route12gate2f"
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Super Rod House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route12superrodhouse"
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         },
@@ -876,18 +2048,95 @@
                         {
                             "title": "Route 15",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "route15"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Route",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route15"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Gate",
+                                        "content": {
+                                            "type": "tabbed",
+                                            "tabs": [
+                                                {
+                                                    "title": "1F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "route15gate1f"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "2F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "route15gate2f"
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         },
                         {
                             "title": "Route 16",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "route16"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Route",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route16"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Gate",
+                                        "content": {
+                                            "type": "tabbed",
+                                            "tabs": [
+                                                {
+                                                    "title": "1F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "route16gate1f"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "2F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "route16gate2f"
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Fly House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route16flyhouse"
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         },
@@ -904,9 +2153,43 @@
                         {
                             "title": "Route 18",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "route18"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Route",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route18"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Gate",
+                                        "content": {
+                                            "type": "tabbed",
+                                            "tabs": [
+                                                {
+                                                    "title": "1F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "route18gate1f"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "title": "2F",
+                                                    "content": {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "route18gate2f"
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         },
@@ -940,9 +2223,26 @@
                         {
                             "title": "Route 22",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "route22"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Route",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route22"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Gate",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route22gate"
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         },
@@ -968,9 +2268,26 @@
                         {
                             "title": "Route 25",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "route25"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Route",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "route25"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Bill's House",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "billshouse"
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         }
@@ -985,18 +2302,70 @@
                         {
                             "title": "Viridian Forest",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "viridianforest"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Forest",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "viridianforest"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "South Gate",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "viridianforestsouthgate"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "North Gate",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "viridianforestnorthgate"
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         },
                         {
                             "title": "Diglett's Cave",
                             "content": {
-                                "type": "map",
-                                "maps": [
-                                    "diglettscave"
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Cave",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "diglettscave"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Route 2 Entrance",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "diglettscaveroute2"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Route 11 Entrance",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "diglettscaveroute11"
+                                            ]
+                                        }
+                                    }
                                 ]
                             }
                         },
@@ -1055,6 +2424,42 @@
                                             "type": "map",
                                             "maps": [
                                                 "undergroundpathwesteast"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Route 5 Entrance",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "undergroundpathroute5"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Route 6 Entrance",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "undergroundpathroute6"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Route 7 Entrance",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "undergroundpathroute7"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Route 8 Entrance",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "undergroundpathroute8"
                                             ]
                                         }
                                     }
