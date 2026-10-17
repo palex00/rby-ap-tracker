@@ -373,133 +373,18 @@
                                                 {
                                                     "title": "1F",
                                                     "content": {
-                                                        "type": "tabbed",
-                                                        "tabs": [
-                                                            {
-                                                                "title": "Hall",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanne1f"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "title": "Room 1",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanne1fgentlemansroom1"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "title": "Room 2",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanne1fgentlemansroom2"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "title": "Room 3",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanne1fgentlemansroom3"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "title": "Room 4",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanne1fgentlemansroom4"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "title": "Room 5",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanne1fgentlemansroom5"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "title": "Room 6",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanne1fgentlemansroom6"
-                                                                    ]
-                                                                }
-                                                            }
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "ssanne1f"
                                                         ]
                                                     }
                                                 },
                                                 {
                                                     "title": "B1F",
                                                     "content": {
-                                                        "type": "tabbed",
-                                                        "tabs": [
-                                                            {
-                                                                "title": "Hall",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanneb1f"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "title": "Room 1",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanneb1fsailorfishermansroom1"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "title": "Room 2",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanneb1fsailorfishermansroom2"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "title": "Room 3",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanneb1fsailorfishermansroom3"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "title": "Room 4",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanneb1fsailorfishermansroom4"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "title": "Room 5",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanneb1fsailorfishermansroom5"
-                                                                    ]
-                                                                }
-                                                            }
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "ssanneb1f"
                                                         ]
                                                     }
                                                 },
@@ -515,71 +400,9 @@
                                                 {
                                                     "title": "2F",
                                                     "content": {
-                                                        "type": "tabbed",
-                                                        "tabs": [
-                                                            {
-                                                                "title": "Hall",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanne2f"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "title": "Room 1",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanne2fgentlemansroom1"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "title": "Room 2",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanne2fgentlemansroom2"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "title": "Room 3",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanne2fgentlemansroom3"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "title": "Room 4",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanne2fgentlemansroom4"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "title": "Room 5",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanne2fgentlemansroom5"
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "title": "Room 6",
-                                                                "content": {
-                                                                    "type": "map",
-                                                                    "maps": [
-                                                                        "ssanne2fgentlemansroom6"
-                                                                    ]
-                                                                }
-                                                            }
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "ssanne2f"
                                                         ]
                                                     }
                                                 },
