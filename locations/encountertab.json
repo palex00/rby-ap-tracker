@@ -6,13 +6,13 @@
         "children": [
             {
                 "name": "Vermilion City",
-                "access_rules": [
-                    "@Kanto/Vermilion City"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Trade",
-                        "access_rules": []
+                        "access_rules": [
+                            "^$CanReach|Vermilion Trade House, ^$CanReach|Route 3"
+                        ]
                     }
                 ],
                 "map_locations": [
@@ -27,9 +27,7 @@
             },
             {
                 "name": "Fuchsia City",
-                "access_rules": [
-                    "@Kanto/Fuchsia City"
-                ],
+                "access_rules": [],
                 "sections": [],
                 "map_locations": [
                     {
@@ -43,15 +41,13 @@
             },
             {
                 "name": "Route 12 South",
-                "access_rules": [
-                    "@Kanto/Route 12 South"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
                         "item_count": 3,
                         "access_rules": [
-                            "^$cut"
+                            "^$CanReach|Route 12-Grass"
                         ],
                         "clear_as_group": false,
                         "visibility_rules": [
@@ -62,7 +58,7 @@
                         "name": "Pokémon",
                         "item_count": 10,
                         "access_rules": [
-                            "^$cut"
+                            "^$CanReach|Route 12-Grass"
                         ],
                         "clear_as_group": false,
                         "visibility_rules": [
@@ -75,6 +71,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 12-Grass"
                         ]
                     },
                     {
@@ -83,6 +82,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 12-Grass"
                         ]
                     }
                 ],
@@ -110,14 +112,14 @@
             },
             {
                 "name": "Celadon City",
-                "access_rules": [
-                    "@Kanto/Celadon City"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Static Encounter: Eevee",
                         "chest_unopened_img": "images/pokedex/eevee.png",
-                        "access_rules": []
+                        "access_rules": [
+                            "^$CanReach|Celadon Mansion Roof House"
+                        ]
                     }
                 ],
                 "map_locations": [
@@ -140,6 +142,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 1"
                         ]
                     },
                     {
@@ -148,6 +153,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 1"
                         ]
                     },
                     {
@@ -155,7 +163,11 @@
                         "hosted_item": "Pidgey, Rattata",
                         "clear_as_group": false,
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 1"
                         ]
                     }
                 ],
@@ -182,12 +194,8 @@
                 ]
             },
             {
-                "name": "Route 2", // Route 2 in locations.json has $cut as a requirement since all items are cut-locked. So, here we use custom access rules.
-                "access_rules": [
-                    "@Kanto/Pewter City",
-                    "^$cut",
-                    "^$old_man"
-                ],
+                "name": "Route 2",
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -195,6 +203,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 2-Grass"
                         ]
                     },
                     {
@@ -203,6 +214,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 2-Grass"
                         ]
                     },
                     {
@@ -211,6 +225,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 2-Grass"
                         ]
                     },
                     {
@@ -219,13 +236,15 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 2-Grass"
                         ]
                     },
                     {
                         "name": "Trade",
                         "access_rules": [
-                            "^$cut",
-                            "@Kanto/Vermilion City" // Trade is possible without cut if you come from Vermillion
+                            "^$CanReach|Route 2 Trade House, ^$CanReach|Route 24"
                         ]
                     }
                 ],
@@ -239,10 +258,7 @@
             },
             {
                 "name": "Diglett's Cave",
-                "access_rules": [
-                    "^$cut",
-                    "@Kanto/Vermilion City"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -250,6 +266,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Diglett's Cave"
                         ]
                     },
                     {
@@ -258,6 +277,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Diglett's Cave"
                         ]
                     },
                     {
@@ -265,7 +287,11 @@
                         "hosted_item": "Diglett, Dugtrio",
                         "clear_as_group": false,
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Diglett's Cave"
                         ]
                     }
                 ],
@@ -279,9 +305,7 @@
             },
             {
                 "name": "Pewter City",
-                "access_rules": [
-                    "@Kanto/Pewter City"
-                ],
+                "access_rules": [],
                 "sections": [],
                 "map_locations": [
                     {
@@ -295,13 +319,13 @@
             },
             {
                 "name": "Cerulean City",
-                "access_rules": [
-                    "@Kanto/Cerulean City"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Trade",
-                        "access_rules": []
+                        "access_rules": [
+                            "^$CanReach|Cerulean Trade House, ^$CanReach|Route 10/Celadon Fishing"
+                        ]
                     }
                 ],
                 "map_locations": [
@@ -316,9 +340,7 @@
             },
             {
                 "name": "Route 24",
-                "access_rules": [
-                    "@Kanto/Route 24"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -326,6 +348,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 24"
                         ]
                     },
                     {
@@ -334,6 +359,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 24"
                         ]
                     },
                     {
@@ -342,6 +370,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 24"
                         ]
                     },
                     {
@@ -350,6 +381,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 24"
                         ]
                     }
                 ],
@@ -363,9 +397,7 @@
             },
             {
                 "name": "Route 25",
-                "access_rules": [
-                    "@Kanto/Route 25"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -373,6 +405,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 25"
                         ]
                     },
                     {
@@ -381,6 +416,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 25"
                         ]
                     },
                     {
@@ -389,6 +427,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 25"
                         ]
                     },
                     {
@@ -397,6 +438,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 25"
                         ]
                     }
                 ],
@@ -410,9 +454,7 @@
             },
             {
                 "name": "Lavender Town",
-                "access_rules": [
-                    "@Kanto/Lavender Town"
-                ],
+                "access_rules": [],
                 "sections": [],
                 "map_locations": [
                     {
@@ -426,9 +468,7 @@
             },
             {
                 "name": "Route 12 North",
-                "access_rules": [
-                    "@Kanto/Route 12 North"
-                ],
+                "access_rules": [],
                 "sections": [],
                 "map_locations": [
                     {
@@ -440,13 +480,13 @@
             },
             {
                 "name": "Route 11-12 Gatehouse",
-                "access_rules": [
-                    "@Kanto/Route 11-12 Gatehouse"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Trade",
-                        "access_rules": []
+                        "access_rules": [
+                            "^$CanReach|Route 11 Gate 2F, ^$CanReach|Safari Zone Center-Wild"
+                        ]
                     }
                 ],
                 "map_locations": [
@@ -459,9 +499,7 @@
             },
             {
                 "name": "Silph Co 1F - 6F",
-                "access_rules": [
-                    "@Kanto/Saffron City, fuji"
-                ],
+                "access_rules": [],
                 "sections": [],
                 "map_locations": [
                     {
@@ -473,15 +511,14 @@
             },
             {
                 "name": "Silph Co 7F - 11F",
-                "access_rules": [
-                    "@Kanto/Silph Co 7F - 11F/11F Rocket 2"
-					// This is specifically 11F Rocket 2 to ensure they have access to this warp
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Static Encounter: Lapras",
                         "chest_unopened_img": "images/pokedex/lapras.png",
-                        "access_rules": []
+                        "access_rules": [
+                            "^$CanReach|Silph Co 7F-NW"
+                        ]
                     }
                 ],
                 "map_locations": [
@@ -504,7 +541,7 @@
                             "opt_encounter_one"
                         ],
                         "access_rules": [
-                            "@Kanto/Route 16/Fly House Woman"
+                            "^$CanReach|Route 16-NE"
                         ]
                     },
                     {
@@ -515,7 +552,7 @@
                             "opt_encounter_ten"
                         ],
                         "access_rules": [
-                            "@Kanto/Route 16/Fly House Woman"
+                            "^$CanReach|Route 16-NE"
                         ]
                     },
                     {
@@ -523,16 +560,17 @@
                         "hosted_item": "Rattata, Raticate, Spearow, Doduo",
                         "clear_as_group": false,
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
                         ],
                         "access_rules": [
-                            "@Kanto/Route 16/Fly House Woman"
+                            "^$CanReach|Route 16-NE"
                         ]
                     },
                     {
                         "name": "Static Encounter: Snorlax",
                         "access_rules": [
-                            "pokeflute, @Kanto/Celadon City" // If you have the pokeflute and come from below, you already have access to celadon
+                            "^$CanReach|Route 16-C, pokeflute"
                         ],
                         "chest_unopened_img": "images/pokedex/snorlax.png",
                         "chest_opened_img": "images/items/pokedex_done.png"
@@ -548,9 +586,7 @@
             },
             {
                 "name": "Route 15",
-                "access_rules": [
-                    "@Kanto/Route 15"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -558,6 +594,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 15"
                         ]
                     },
                     {
@@ -566,6 +605,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 15"
                         ]
                     },
                     {
@@ -574,6 +616,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 15"
                         ]
                     },
                     {
@@ -582,6 +627,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 15"
                         ]
                     }
                 ],
@@ -595,9 +643,7 @@
             },
             {
                 "name": "Safari Zone",
-                "access_rules": [
-                    "@Kanto/Safari Zone"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Center Zone Pokémon 1:1",
@@ -605,6 +651,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Safari Zone Center-Wild"
                         ]
                     },
                     {
@@ -613,6 +662,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Safari Zone Center-Wild"
                         ]
                     },
                     {
@@ -621,6 +673,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Safari Zone Center-Wild"
                         ]
                     },
                     {
@@ -629,6 +684,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Safari Zone Center-Wild"
                         ]
                     },
                     {
@@ -637,6 +695,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Safari Zone East"
                         ]
                     },
                     {
@@ -645,6 +706,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Safari Zone East"
                         ]
                     },
                     {
@@ -653,6 +717,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Safari Zone East"
                         ]
                     },
                     {
@@ -661,6 +728,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Safari Zone East"
                         ]
                     },
                     {
@@ -669,6 +739,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Safari Zone North"
                         ]
                     },
                     {
@@ -677,6 +750,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Safari Zone North"
                         ]
                     },
                     {
@@ -685,6 +761,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Safari Zone North"
                         ]
                     },
                     {
@@ -693,6 +772,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Safari Zone North"
                         ]
                     },
                     {
@@ -701,6 +783,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Safari Zone West-Wild"
                         ]
                     },
                     {
@@ -709,6 +794,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Safari Zone West-Wild"
                         ]
                     },
                     {
@@ -717,6 +805,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Safari Zone West-Wild"
                         ]
                     },
                     {
@@ -725,6 +816,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Safari Zone West-Wild"
                         ]
                     }
                 ],
@@ -738,37 +832,45 @@
             },
             {
                 "name": "Cinnabar Island",
-                "access_rules": [
-                    "@Kanto/Cinnabar Island"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Trade",
                         "item_count": 3,
                         "clear_as_group": false,
-                        "access_rules": []
+                        "access_rules": [
+                            "^$CanReach|Cinnabar Lab Fossil Room, ^$CanReach|Pokemon Mansion 1F-Wild",
+                            "^$CanReach|Cinnabar Lab Trade Room, ^$CanReach|Route 12-Grass",
+                            "^$CanReach|Cinnabar Lab Trade Room, ^$CanReach|Cerulean Cave 1F-Wild"
+                        ]
                     },
-					{
-						"name": "Fossil: Old Amber",
-						"item_count": 1,
-						"clear_as_group": false,
-						"access_rules": ["oldamber"],
-                        "chest_unopened_img": "images/items/oldamber.png",
-					},
-					{
-						"name": "Fossil: Dome Fossil",
-						"item_count": 1,
-						"clear_as_group": false,
-						"access_rules": ["domefossil"],
-                        "chest_unopened_img": "images/items/dome.png",
-					},
-					{
-						"name": "Fossil: Helix Fossil",
-						"item_count": 1,
-						"clear_as_group": false,
-						"access_rules": ["helixfossil"],
-                        "chest_unopened_img": "images/items/helix.png",
-					}
+                    {
+                        "name": "Fossil: Old Amber",
+                        "item_count": 1,
+                        "clear_as_group": false,
+                        "access_rules": [
+                            "^$CanReach|Cinnabar Lab Fossil Room, oldamber, ^$CanReach|Cinnabar Island"
+                        ],
+                        "chest_unopened_img": "images/items/oldamber.png"
+                    },
+                    {
+                        "name": "Fossil: Dome Fossil",
+                        "item_count": 1,
+                        "clear_as_group": false,
+                        "access_rules": [
+                            "^$CanReach|Cinnabar Lab Fossil Room, domefossil, ^$CanReach|Cinnabar Island"
+                        ],
+                        "chest_unopened_img": "images/items/dome.png"
+                    },
+                    {
+                        "name": "Fossil: Helix Fossil",
+                        "item_count": 1,
+                        "clear_as_group": false,
+                        "access_rules": [
+                            "^$CanReach|Cinnabar Lab Fossil Room, helixfossil, ^$CanReach|Cinnabar Island"
+                        ],
+                        "chest_unopened_img": "images/items/helix.png"
+                    }
                 ],
                 "map_locations": [
                     {
@@ -782,19 +884,21 @@
             },
             {
                 "name": "Saffron City",
-                "access_rules": [
-                    "@Kanto/Saffron City"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Static Encounter: Hitmonlee",
                         "chest_unopened_img": "images/pokedex/hitmonlee.png",
-                        "access_rules": []
+                        "access_rules": [
+                            "^$CanReach|Saffron Fighting Dojo"
+                        ]
                     },
                     {
                         "name": "Static Encounter: Hitmonchan",
                         "chest_unopened_img": "images/pokedex/hitmonchan.png",
-                        "access_rules": []
+                        "access_rules": [
+                            "^$CanReach|Saffron Fighting Dojo"
+                        ]
                     }
                 ],
                 "map_locations": [
@@ -809,9 +913,7 @@
             },
             {
                 "name": "Route 4",
-                "access_rules": [
-                    "@Kanto/Cerulean City" // Route 4 has more requirements in locations.json. Route 4-Mons can be accessed if you have access to cerulean.
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -819,6 +921,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 4-E"
                         ]
                     },
                     {
@@ -827,6 +932,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 4-E"
                         ]
                     },
                     {
@@ -835,6 +943,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 4-E"
                         ]
                     },
                     {
@@ -843,6 +954,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 4-E"
                         ]
                     }
                 ],
@@ -856,9 +970,7 @@
             },
             {
                 "name": "Route 9",
-                "access_rules": [
-                    "@Kanto/Route 9"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -866,6 +978,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 9"
                         ]
                     },
                     {
@@ -874,6 +989,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 9"
                         ]
                     },
                     {
@@ -882,6 +1000,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 9"
                         ]
                     },
                     {
@@ -890,6 +1011,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 9"
                         ]
                     }
                 ],
@@ -903,9 +1027,7 @@
             },
             {
                 "name": "Cerulean Cave",
-                "access_rules": [
-                    "@Kanto/Cerulean Cave"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "1F Pokémon 1:1",
@@ -913,6 +1035,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Cerulean Cave 1F-Wild"
                         ]
                     },
                     {
@@ -921,6 +1046,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Cerulean Cave 1F-Wild"
                         ]
                     },
                     {
@@ -929,6 +1057,10 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Cerulean Cave 2F-Wild",
+                            "^$CanReach|Cerulean Cave B1F"
                         ]
                     },
                     {
@@ -937,6 +1069,10 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Cerulean Cave 2F-Wild",
+                            "^$CanReach|Cerulean Cave B1F"
                         ]
                     },
                     {
@@ -945,6 +1081,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Cerulean Cave 2F-Wild"
                         ]
                     },
                     {
@@ -953,6 +1092,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Cerulean Cave 2F-Wild"
                         ]
                     },
                     {
@@ -961,6 +1103,10 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Cerulean Cave 2F-Wild",
+                            "^$CanReach|Cerulean Cave B1F"
                         ]
                     },
                     {
@@ -969,6 +1115,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Cerulean Cave B1F"
                         ]
                     },
                     {
@@ -977,6 +1126,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Cerulean Cave B1F"
                         ]
                     },
                     {
@@ -985,6 +1137,10 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Cerulean Cave 2F-Wild",
+                            "^$CanReach|Cerulean Cave B1F"
                         ]
                     },
                     {
@@ -993,11 +1149,17 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Cerulean Cave 2F-Wild",
+                            "^$CanReach|Cerulean Cave B1F"
                         ]
                     },
                     {
                         "name": "Static Encounter: Mewtwo",
-                        "access_rules": [],
+                        "access_rules": [
+                            "^$CanReach|Cerulean Cave B1F-E"
+                        ],
                         "chest_unopened_img": "images/pokedex/mewtwo.png",
                         "chest_opened_img": "images/items/pokedex_done.png"
                     }
@@ -1012,9 +1174,7 @@
             },
             {
                 "name": "Pokemon Tower",
-                "access_rules": [
-                    "@Kanto/Pokemon Tower, silphscope"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "3F Pokémon 1:1",
@@ -1022,6 +1182,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Tower 3F, silphscope"
                         ]
                     },
                     {
@@ -1030,6 +1193,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Tower 3F, silphscope"
                         ]
                     },
                     {
@@ -1038,6 +1204,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Tower 4F, silphscope"
                         ]
                     },
                     {
@@ -1046,6 +1215,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Tower 4F, silphscope"
                         ]
                     },
                     {
@@ -1054,6 +1226,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Tower 5F, silphscope"
                         ]
                     },
                     {
@@ -1062,6 +1237,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Tower 5F, silphscope"
                         ]
                     },
                     {
@@ -1070,6 +1248,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Tower 6F, silphscope"
                         ]
                     },
                     {
@@ -1078,6 +1259,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Tower 6F, silphscope"
                         ]
                     },
                     {
@@ -1086,6 +1270,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Tower 7F, silphscope"
                         ]
                     },
                     {
@@ -1094,6 +1281,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Tower 7F, silphscope"
                         ]
                     },
                     {
@@ -1101,7 +1291,11 @@
                         "hosted_item": "Gastly, Haunter, Cubone",
                         "clear_as_group": false,
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Tower 3F, silphscope"
                         ]
                     }
                 ],
@@ -1115,9 +1309,7 @@
             },
             {
                 "name": "Route 5",
-                "access_rules": [
-                    "@Kanto/Route 6"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -1125,6 +1317,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 5"
                         ]
                     },
                     {
@@ -1133,6 +1328,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 5"
                         ]
                     },
                     {
@@ -1141,6 +1339,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 5"
                         ]
                     },
                     {
@@ -1149,6 +1350,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 5"
                         ]
                     }
                 ],
@@ -1162,9 +1366,7 @@
             },
             {
                 "name": "Pokemon Mansion",
-                "access_rules": [
-                    "@Kanto/Pokemon Mansion"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "1F Pokémon 1:1",
@@ -1172,6 +1374,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Mansion 1F-Wild"
                         ]
                     },
                     {
@@ -1180,6 +1385,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Mansion 1F-Wild"
                         ]
                     },
                     {
@@ -1188,6 +1396,12 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Mansion 1F-Wild",
+                            "^$CanReach|Pokemon Mansion 2F-Wild",
+                            "^$CanReach|Pokemon Mansion 3F-Wild",
+                            "^$CanReach|Pokemon Mansion B1F"
                         ]
                     },
                     {
@@ -1196,6 +1410,12 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Mansion 1F-Wild",
+                            "^$CanReach|Pokemon Mansion 2F-Wild",
+                            "^$CanReach|Pokemon Mansion 3F-Wild",
+                            "^$CanReach|Pokemon Mansion B1F"
                         ]
                     },
                     {
@@ -1204,6 +1424,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Mansion 2F-Wild"
                         ]
                     },
                     {
@@ -1212,6 +1435,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Mansion 2F-Wild"
                         ]
                     },
                     {
@@ -1220,6 +1446,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Mansion 3F-Wild"
                         ]
                     },
                     {
@@ -1228,6 +1457,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Mansion 3F-Wild"
                         ]
                     },
                     {
@@ -1236,6 +1468,10 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Mansion 3F-Wild",
+                            "^$CanReach|Pokemon Mansion B1F"
                         ]
                     },
                     {
@@ -1244,6 +1480,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one, opt_game_version_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Mansion B1F"
                         ]
                     },
                     {
@@ -1252,6 +1491,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one, opt_game_version_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Mansion B1F"
                         ]
                     },
                     {
@@ -1260,6 +1502,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Pokemon Mansion B1F"
                         ]
                     }
                 ],
@@ -1273,9 +1518,7 @@
             },
             {
                 "name": "Power Plant",
-                "access_rules": [
-                    "@Kanto/Power Plant"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -1283,6 +1526,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Power Plant"
                         ]
                     },
                     {
@@ -1291,6 +1537,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Power Plant"
                         ]
                     },
                     {
@@ -1299,6 +1548,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Power Plant"
                         ]
                     },
                     {
@@ -1307,25 +1559,34 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Power Plant"
                         ]
                     },
                     {
                         "name": "Static Encounter: Voltorb Balls",
-                        "access_rules": [],
+                        "access_rules": [
+                            "^$CanReach|Power Plant"
+                        ],
                         "item_count": 6,
                         "clear_as_group": false,
                         "chest_unopened_img": "images/pokedex/voltorb.png"
                     },
                     {
                         "name": "Static Encounter: Electrode Balls",
-                        "access_rules": [],
+                        "access_rules": [
+                            "^$CanReach|Power Plant"
+                        ],
                         "item_count": 2,
                         "clear_as_group": false,
                         "chest_unopened_img": "images/pokedex/electrode.png"
                     },
                     {
                         "name": "Static Encounter: Zapdos",
-                        "access_rules": [],
+                        "access_rules": [
+                            "^$CanReach|Power Plant"
+                        ],
                         "chest_unopened_img": "images/pokedex/zapdos.png"
                     }
                 ],
@@ -1339,18 +1600,15 @@
             },
             {
                 "name": "Victory Road",
-                "access_rules": [
-                    "" // This one needs specific access rules because parts of it can be accessed with various combinations backwards but not forwards and vice versa
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "1F Pokémon 1:1",
                         "item_count": 8,
                         "clear_as_group": false,
                         "access_rules": [
-							"opt_er_on",
-                            "^$rt23, ^$victoryroad, ^$surf", "@Kanto/Indigo Plateau, ^$strength"
-                ],
+                            "^$CanReach|Victory Road 1F-Wild"
+                        ],
                         "visibility_rules": [
                             "opt_encounter_one"
                         ]
@@ -1360,9 +1618,8 @@
                         "item_count": 10,
                         "clear_as_group": false,
                         "access_rules": [
-							"opt_er_on",
-                            "^$rt23, ^$victoryroad, ^$surf", "@Kanto/Indigo Plateau, ^$strength"
-                ],
+                            "^$CanReach|Victory Road 1F-Wild"
+                        ],
                         "visibility_rules": [
                             "opt_encounter_ten"
                         ]
@@ -1372,12 +1629,11 @@
                         "hosted_item": "Zubat, Golbat, Machop, Machoke, Geodude, Graveler, Onix, Marowak",
                         "clear_as_group": false,
                         "access_rules": [
-							"opt_er_on",
-                            "^$rt23, ^$victoryroad, ^$surf", "@Kanto/Indigo Plateau, ^$strength"
-                ],
-                        
+                            "^$CanReach|Victory Road 1F-Wild"
+                        ],
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
                         ]
                     },
                     {
@@ -1385,8 +1641,8 @@
                         "item_count": 8,
                         "clear_as_group": false,
                         "access_rules": [
-                            "@Kanto/Indigo Plateau" // This is specifically because you can reach a small 3x3 section of 2F by going backwards, with no strength. If you go forwards you have indigo access either way.
-                ],
+                            "^$CanReach|Victory Road 2F-Wild"
+                        ],
                         "visibility_rules": [
                             "opt_encounter_one"
                         ]
@@ -1396,8 +1652,8 @@
                         "item_count": 10,
                         "clear_as_group": false,
                         "access_rules": [
-                            "@Kanto/Indigo Plateau" // This is specifically because you can reach a small 3x3 section of 2F by going backwards, with no strength. If you go forwards you have indigo access either way.
-                ],
+                            "^$CanReach|Victory Road 2F-Wild"
+                        ],
                         "visibility_rules": [
                             "opt_encounter_ten"
                         ]
@@ -1407,11 +1663,11 @@
                         "hosted_item": "Zubat, Golbat, Machop, Machoke, Geodude, Graveler, Onix, Marowak",
                         "clear_as_group": false,
                         "access_rules": [
-                            "@Kanto/Indigo Plateau" // This is specifically because you can reach a small 3x3 section of 2F by going backwards, with no strength. If you go forwards you have indigo access either way.
-                ],
-                        
+                            "^$CanReach|Victory Road 2F-Wild"
+                        ],
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
                         ]
                     },
                     {
@@ -1419,8 +1675,8 @@
                         "item_count": 8,
                         "clear_as_group": false,
                         "access_rules": [
-                            "@Kanto/Indigo Plateau"
-                ],
+                            "^$CanReach|Victory Road 3F-Wild"
+                        ],
                         "visibility_rules": [
                             "opt_encounter_one"
                         ]
@@ -1430,8 +1686,8 @@
                         "item_count": 10,
                         "clear_as_group": false,
                         "access_rules": [
-                            "@Kanto/Indigo Plateau"
-                ],
+                            "^$CanReach|Victory Road 3F-Wild"
+                        ],
                         "visibility_rules": [
                             "opt_encounter_ten"
                         ]
@@ -1441,19 +1697,18 @@
                         "hosted_item": "Zubat, Golbat, Venomoth, Machop, Machoke, Geodude, Graveler, Onix",
                         "clear_as_group": false,
                         "access_rules": [
-                            "@Kanto/Indigo Plateau"
-                ],
-                        
+                            "^$CanReach|Victory Road 3F-Wild"
+                        ],
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
                         ]
                     },
                     {
                         "name": "Static Encounter: Moltres",
                         "access_rules": [
-							"opt_er_on",
-							"@Kanto/Indigo Plateau, ^$strength"
-						],
+                            "^$CanReach|Victory Road 2F-NW"
+                        ],
                         "chest_unopened_img": "images/pokedex/moltres.png",
                         "chest_opened_img": "images/items/pokedex_done.png"
                     }
@@ -1468,9 +1723,7 @@
             },
             {
                 "name": "Viridian Forest",
-                "access_rules": [
-                    "@Kanto/Viridian Forest"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -1478,6 +1731,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Viridian Forest"
                         ]
                     },
                     {
@@ -1486,6 +1742,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Viridian Forest"
                         ]
                     },
                     {
@@ -1493,9 +1752,13 @@
                         "hosted_item": "Caterpie, Metapod, Weedle, Kakuna, Pikachu",
                         "clear_as_group": false,
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Viridian Forest"
                         ]
-                    },
+                    }
                 ],
                 "map_locations": [
                     {
@@ -1507,9 +1770,7 @@
             },
             {
                 "name": "Mt Moon",
-                "access_rules": [
-                    "@Kanto/Mt Moon"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "1F Pokémon 1:1",
@@ -1517,6 +1778,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Mt Moon 1F"
                         ]
                     },
                     {
@@ -1525,6 +1789,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Mt Moon 1F"
                         ]
                     },
                     {
@@ -1533,6 +1800,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Mt Moon B1F-Wild"
                         ]
                     },
                     {
@@ -1541,6 +1811,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Mt Moon B1F-Wild"
                         ]
                     },
                     {
@@ -1549,6 +1822,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Mt Moon B2F-Wild"
                         ]
                     },
                     {
@@ -1557,6 +1833,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Mt Moon B2F-Wild"
                         ]
                     },
                     {
@@ -1564,7 +1843,13 @@
                         "hosted_item": "Clefairy, Zubat, Paras, Geodude",
                         "clear_as_group": false,
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Mt Moon 1F",
+                            "^$CanReach|Mt Moon B1F-Wild",
+                            "^$CanReach|Mt Moon B2F-Wild"
                         ]
                     }
                 ],
@@ -1578,9 +1863,7 @@
             },
             {
                 "name": "Rocket Hideout",
-                "access_rules": [
-                    "@Kanto/Rocket Hideout"
-                ],
+                "access_rules": [],
                 "sections": [],
                 "map_locations": [
                     {
@@ -1592,9 +1875,7 @@
             },
             {
                 "name": "Rock Tunnel",
-                "access_rules": [
-                    "@Kanto/Rock Tunnel"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "B1F Pokémon 1:1",
@@ -1602,6 +1883,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Rock Tunnel B1F-Wild"
                         ]
                     },
                     {
@@ -1610,6 +1894,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Rock Tunnel B1F-Wild"
                         ]
                     },
                     {
@@ -1618,6 +1905,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Rock Tunnel 1F-Wild"
                         ]
                     },
                     {
@@ -1626,6 +1916,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Rock Tunnel 1F-Wild"
                         ]
                     },
                     {
@@ -1633,7 +1926,12 @@
                         "hosted_item": "Zubat, Machop, Geodude, Onix",
                         "clear_as_group": false,
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Rock Tunnel 1F-Wild",
+                            "^$CanReach|Rock Tunnel B1F-Wild"
                         ]
                     }
                 ],
@@ -1647,9 +1945,7 @@
             },
             {
                 "name": "Route 10 North",
-                "access_rules": [
-                    "@Kanto/Route 10 North"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -1657,6 +1953,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 10-N"
                         ]
                     },
                     {
@@ -1665,6 +1964,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 10-N"
                         ]
                     },
                     {
@@ -1672,7 +1974,11 @@
                         "hosted_item": "Spearow, Ekans, Voltorb",
                         "clear_as_group": false,
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 10-N"
                         ]
                     }
                 ],
@@ -1686,9 +1992,7 @@
             },
             {
                 "name": "Route 10 South",
-                "access_rules": [
-                    "@Kanto/Route 10 South"
-                ],
+                "access_rules": [],
                 "sections": [],
                 "map_locations": [
                     {
@@ -1700,15 +2004,13 @@
             },
             {
                 "name": "Route 13",
-                "access_rules": [
-                    "@Kanto/Route 14"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
                         "item_count": 5,
                         "access_rules": [
-                            "^$cut"
+                            "^$CanReach|Route 13-Grass"
                         ],
                         "clear_as_group": false,
                         "visibility_rules": [
@@ -1719,7 +2021,7 @@
                         "name": "Pokémon",
                         "item_count": 10,
                         "access_rules": [
-                            "^$cut"
+                            "^$CanReach|Route 13-Grass"
                         ],
                         "clear_as_group": false,
                         "visibility_rules": [
@@ -1729,7 +2031,9 @@
                     {
                         "name": "Pokémon (Vanilla - Red)",
                         "hosted_item": "Pidgey, Oddish, Gloom, Venonat, Ditto",
-                        "access_rules": ["^$cut"],
+                        "access_rules": [
+                            "^$CanReach|Route 13-Grass"
+                        ],
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
@@ -1738,7 +2042,9 @@
                     {
                         "name": "Pokémon (Vanilla - Blue)",
                         "hosted_item": "Pidgey, Venonat, Bellsprout, Weepinbell, Ditto",
-                        "access_rules": ["^$cut"],
+                        "access_rules": [
+                            "^$CanReach|Route 13-Grass"
+                        ],
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
@@ -1755,9 +2061,7 @@
             },
             {
                 "name": "Seafoam Islands",
-                "access_rules": [
-                    "@Kanto/Seafoam Islands"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "1F Pokémon 1:1",
@@ -1765,6 +2069,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands 1F-Wild"
                         ]
                     },
                     {
@@ -1773,6 +2080,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands 1F-Wild"
                         ]
                     },
                     {
@@ -1781,6 +2091,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands 1F-Wild"
                         ]
                     },
                     {
@@ -1789,6 +2102,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands 1F-Wild"
                         ]
                     },
                     {
@@ -1797,6 +2113,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands B1F-Wild"
                         ]
                     },
                     {
@@ -1805,6 +2124,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands B1F-Wild"
                         ]
                     },
                     {
@@ -1813,6 +2135,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands B1F-Wild"
                         ]
                     },
                     {
@@ -1821,6 +2146,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands B1F-Wild"
                         ]
                     },
                     {
@@ -1829,6 +2157,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands B2F-Wild"
                         ]
                     },
                     {
@@ -1837,6 +2168,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands B2F-Wild"
                         ]
                     },
                     {
@@ -1845,6 +2179,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands B2F-Wild"
                         ]
                     },
                     {
@@ -1853,6 +2190,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands B2F-Wild"
                         ]
                     },
                     {
@@ -1861,6 +2201,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands B3F-Wild"
                         ]
                     },
                     {
@@ -1869,6 +2212,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands B3F-Wild"
                         ]
                     },
                     {
@@ -1877,6 +2223,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands B3F-Wild"
                         ]
                     },
                     {
@@ -1885,6 +2234,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands B3F-Wild"
                         ]
                     },
                     {
@@ -1893,6 +2245,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands B4F"
                         ]
                     },
                     {
@@ -1901,6 +2256,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands B4F"
                         ]
                     },
                     {
@@ -1909,6 +2267,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands B4F"
                         ]
                     },
                     {
@@ -1917,12 +2278,15 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Seafoam Islands B4F"
                         ]
                     },
                     {
                         "name": "Static Encounter: Articuno",
                         "access_rules": [
-                            "^$strength"
+                            "^$CanReach|Seafoam Islands B4F, ^$strength, ^$CanReach|Seafoam Islands B3F"
                         ],
                         "chest_unopened_img": "images/pokedex/articuno.png",
                         "chest_opened_img": "images/items/pokedex_done.png"
@@ -1938,9 +2302,7 @@
             },
             {
                 "name": "Route 23",
-                "access_rules": [
-                    "@Kanto/Route 23"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -1948,6 +2310,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 23-Grass"
                         ]
                     },
                     {
@@ -1956,6 +2321,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 23-Grass"
                         ]
                     },
                     {
@@ -1964,6 +2332,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 23-Grass"
                         ]
                     },
                     {
@@ -1972,6 +2343,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 23-Grass"
                         ]
                     }
                 ],
@@ -1985,9 +2359,7 @@
             },
             {
                 "name": "Route 11",
-                "access_rules": [
-                    "@Kanto/Route 11"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -1995,6 +2367,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 11"
                         ]
                     },
                     {
@@ -2003,6 +2378,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 11"
                         ]
                     },
                     {
@@ -2011,6 +2389,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 11"
                         ]
                     },
                     {
@@ -2019,6 +2400,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 11"
                         ]
                     }
                 ],
@@ -2032,9 +2416,7 @@
             },
             {
                 "name": "Route 17",
-                "access_rules": [
-                    "@Kanto/Route 17"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -2042,6 +2424,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 17"
                         ]
                     },
                     {
@@ -2050,6 +2435,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 17"
                         ]
                     },
                     {
@@ -2057,7 +2445,11 @@
                         "hosted_item": "Raticate, Spearow, Fearow, Doduo",
                         "clear_as_group": false,
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 17"
                         ]
                     }
                 ],
@@ -2071,14 +2463,12 @@
             },
             {
                 "name": "S.S. Anne",
-                "access_rules": [
-                    "@Kanto/S.S. Anne"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Static Encounter: Mew",
                         "access_rules": [
-                            "^$surf"
+                            "^$CanReach|Vermilion Dock, ^$surf"
                         ],
                         "chest_unopened_img": "images/pokedex/mew.png",
                         "chest_opened_img": "images/items/pokedex_done.png"
@@ -2094,9 +2484,7 @@
             },
             {
                 "name": "Route 21",
-                "access_rules": [
-                    "@Kanto/Route 21"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon (Grass) 1:1",
@@ -2104,6 +2492,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 21"
                         ]
                     },
                     {
@@ -2112,6 +2503,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 21"
                         ]
                     },
                     {
@@ -2119,7 +2513,11 @@
                         "hosted_item": "Pidgey, Pidgeotto, Rattata, Raticate, Tangela",
                         "clear_as_group": false,
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 21"
                         ]
                     },
                     {
@@ -2128,6 +2526,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 21"
                         ]
                     },
                     {
@@ -2136,6 +2537,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 21"
                         ]
                     },
                     {
@@ -2143,7 +2547,11 @@
                         "hosted_item": "Tentacool",
                         "clear_as_group": false,
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 21"
                         ]
                     }
                 ],
@@ -2157,9 +2565,7 @@
             },
             {
                 "name": "Route 20 West",
-                "access_rules": [
-                    "@Kanto/Route 20 West"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -2167,6 +2573,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 19/20-Water"
                         ]
                     },
                     {
@@ -2175,6 +2584,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 19/20-Water"
                         ]
                     },
                     {
@@ -2182,7 +2594,11 @@
                         "hosted_item": "Tentacool",
                         "clear_as_group": false,
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 19/20-Water"
                         ]
                     }
                 ],
@@ -2204,6 +2620,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 22"
                         ]
                     },
                     {
@@ -2212,6 +2631,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 22"
                         ]
                     },
                     {
@@ -2219,7 +2641,11 @@
                         "hosted_item": "Rattata, Spearow, nidoranm, nidoranf",
                         "clear_as_group": false,
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 22"
                         ]
                     }
                 ],
@@ -2233,9 +2659,7 @@
             },
             {
                 "name": "Route 20 East",
-                "access_rules": [
-                    "@Kanto/Route 20 East"
-                ],
+                "access_rules": [],
                 "sections": [],
                 "map_locations": [
                     {
@@ -2247,7 +2671,7 @@
             },
             {
                 "name": "Route 19",
-                "access_rules": ["@Kanto/Fuchsia City"],
+                "access_rules": [],
                 "sections": [],
                 "map_locations": [
                     {
@@ -2259,9 +2683,7 @@
             },
             {
                 "name": "Route 18",
-                "access_rules": [
-                    "@Kanto/Route 18"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -2269,6 +2691,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 18-E"
                         ]
                     },
                     {
@@ -2277,6 +2702,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 18-E"
                         ]
                     },
                     {
@@ -2284,12 +2712,18 @@
                         "hosted_item": "Raticate, Spearow, Fearow, Doduo",
                         "clear_as_group": false,
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 18-E"
                         ]
                     },
                     {
                         "name": "Trade",
-                        "access_rules": []
+                        "access_rules": [
+                            "^$CanReach|Route 18 Gate 2F, ^$CanReach|Route 23/Cerulean Cave Fishing"
+                        ]
                     }
                 ],
                 "map_locations": [
@@ -2302,9 +2736,7 @@
             },
             {
                 "name": "Route 14",
-                "access_rules": [
-                    "@Kanto/Route 14, ^$cut"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -2312,6 +2744,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 14-Grass"
                         ]
                     },
                     {
@@ -2320,6 +2755,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 14-Grass"
                         ]
                     },
                     {
@@ -2328,6 +2766,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 14-Grass"
                         ]
                     },
                     {
@@ -2336,6 +2777,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 14-Grass"
                         ]
                     }
                 ],
@@ -2349,13 +2793,13 @@
             },
             {
                 "name": "Route 12",
-                "access_rules": [
-                    "@Kanto/Lavender Town, pokeflute" // If you have access to Snorlax from the west or south and have a flute, you also have access to lavender
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Static Encounter: Snorlax",
-                        "access_rules": [],
+                        "access_rules": [
+                            "^$CanReach|Route 12-W, pokeflute"
+                        ],
                         "chest_unopened_img": "images/pokedex/snorlax.png",
                         "chest_opened_img": "images/items/pokedex_done.png"
                     }
@@ -2370,9 +2814,7 @@
             },
             {
                 "name": "Route 8",
-                "access_rules": [
-                    "@Kanto/Route 8, $cut"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -2380,6 +2822,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 8-Grass"
                         ]
                     },
                     {
@@ -2388,6 +2833,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 8-Grass"
                         ]
                     },
                     {
@@ -2396,6 +2844,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 8-Grass"
                         ]
                     },
                     {
@@ -2404,6 +2855,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 8-Grass"
                         ]
                     }
                 ],
@@ -2417,9 +2871,7 @@
             },
             {
                 "name": "Route 7",
-                "access_rules": [
-                    "@Kanto/Celadon City"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -2427,6 +2879,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 7"
                         ]
                     },
                     {
@@ -2435,6 +2890,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 7"
                         ]
                     },
                     {
@@ -2443,6 +2901,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 7"
                         ]
                     },
                     {
@@ -2451,6 +2912,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 7"
                         ]
                     }
                 ],
@@ -2464,9 +2928,7 @@
             },
             {
                 "name": "Route 6",
-                "access_rules": [
-                    "@Kanto/Route 6"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -2474,6 +2936,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 6"
                         ]
                     },
                     {
@@ -2482,6 +2947,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 6"
                         ]
                     },
                     {
@@ -2490,6 +2958,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_red"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 6"
                         ]
                     },
                     {
@@ -2498,6 +2969,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 6"
                         ]
                     }
                 ],
@@ -2511,9 +2985,7 @@
             },
             {
                 "name": "Route 3",
-                "access_rules": [
-                    "@Kanto/Route 3"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Pokémon 1:1",
@@ -2521,6 +2993,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_one"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 3"
                         ]
                     },
                     {
@@ -2529,6 +3004,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             "opt_encounter_ten"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 3"
                         ]
                     },
                     {
@@ -2536,12 +3014,19 @@
                         "hosted_item": "Pidgey, Spearow, Jigglypuff",
                         "clear_as_group": false,
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Route 3"
                         ]
                     },
                     {
                         "name": "Static Encounter: Buy Magikarp",
-                        "chest_unopened_img": "images/pokedex/magikarp.png"
+                        "chest_unopened_img": "images/pokedex/magikarp.png",
+                        "access_rules": [
+                            "^$CanReach|Route 4 Pokemon Center"
+                        ]
                     }
                 ],
                 "map_locations": [
@@ -2554,9 +3039,7 @@
             },
             {
                 "name": "Celadon Game Corner",
-                "access_rules": [
-                    "@Kanto/Celadon City,coincase"
-                ],
+                "access_rules": [],
                 "chest_unopened_img": "images/items/coincase.png",
                 "chest_opened_img": "images/items/coincase_done.png",
                 "sections": [
@@ -2566,6 +3049,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             ""
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Celadon Prize Corner, coincase, ^$CanReach|Celadon Game Corner"
                         ]
                     },
                     {
@@ -2574,6 +3060,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             ""
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Celadon Prize Corner, coincase, ^$CanReach|Celadon Game Corner"
                         ]
                     },
                     {
@@ -2582,6 +3071,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             ""
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Celadon Prize Corner, coincase, ^$CanReach|Celadon Game Corner"
                         ]
                     },
                     {
@@ -2590,6 +3082,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             ""
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Celadon Prize Corner, coincase, ^$CanReach|Celadon Game Corner"
                         ]
                     },
                     {
@@ -2598,6 +3093,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             ""
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Celadon Prize Corner, coincase, ^$CanReach|Celadon Game Corner"
                         ]
                     },
                     {
@@ -2606,6 +3104,9 @@
                         "clear_as_group": false,
                         "visibility_rules": [
                             ""
+                        ],
+                        "access_rules": [
+                            "^$CanReach|Celadon Prize Corner, coincase, ^$CanReach|Celadon Game Corner"
                         ]
                     }
                 ],
@@ -2619,13 +3120,13 @@
             },
             {
                 "name": "Underground Tunnel North-South",
-                "access_rules": [
-                    "@Kanto/Underground Tunnel North-South"
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Trade",
-                        "access_rules": []
+                        "access_rules": [
+                            "^$CanReach|Underground Path Route 5, ^$CanReach|Route 24"
+                        ]
                     }
                 ],
                 "map_locations": [
@@ -2638,9 +3139,7 @@
             },
             {
                 "name": "Fishing Is Fun",
-                "access_rules": [
-                    ""
-                ],
+                "access_rules": [],
                 "sections": [
                     {
                         "name": "Old Rod (Any Spot)",
@@ -2653,18 +3152,19 @@
                         "chest_opened_img": "images/items/oldrod_done.png",
                         "clear_as_group": false,
                         "access_rules": [
-                            "oldrod"
+                            "^$CanReach|Old Rod Fishing"
                         ]
                     },
                     {
                         "name": "Old Rod (Any Spot) (Vanilla)",
                         "hosted_item": "Magikarp",
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
                         ],
                         "clear_as_group": false,
                         "access_rules": [
-                            "oldrod"
+                            "^$CanReach|Old Rod Fishing"
                         ]
                     },
                     {
@@ -2678,18 +3178,19 @@
                             "opt_encounter_ten"
                         ],
                         "access_rules": [
-                            "goodrod"
+                            "^$CanReach|Good Rod Fishing"
                         ]
                     },
                     {
                         "name": "Good Rod (Any Spot) (Vanilla)",
                         "hosted_item": "Goldeen, Poliwag",
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
                         ],
                         "clear_as_group": false,
                         "access_rules": [
-                            "goodrod"
+                            "^$CanReach|Good Rod Fishing"
                         ]
                     },
                     {
@@ -2703,18 +3204,19 @@
                             "opt_encounter_ten"
                         ],
                         "access_rules": [
-                            "superrod"
+                            "^$CanReach|Pallet/Viridian Fishing"
                         ]
                     },
                     {
                         "name": "Super Rod Rod (Pallet & Viridian) (Vanilla)",
                         "hosted_item": "Tentacool, Poliwag",
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
                         ],
                         "clear_as_group": false,
                         "access_rules": [
-                            "superrod"
+                            "^$CanReach|Pallet/Viridian Fishing"
                         ]
                     },
                     {
@@ -2728,18 +3230,19 @@
                             "opt_encounter_ten"
                         ],
                         "access_rules": [
-                            "superrod"
+                            "^$CanReach|Route 22 Fishing"
                         ]
                     },
                     {
                         "name": "Super Rod Rod (Route 22) (Vanilla)",
                         "hosted_item": "Goldeen, Poliwag",
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
                         ],
                         "clear_as_group": false,
                         "access_rules": [
-                            "superrod"
+                            "^$CanReach|Route 22 Fishing"
                         ]
                     },
                     {
@@ -2753,18 +3256,19 @@
                             "opt_encounter_ten"
                         ],
                         "access_rules": [
-                            "superrod, @Kanto/Cerulean City"
+                            "^$CanReach|Route 24/25/Cerulean/Cerulean Gym Fishing"
                         ]
                     },
                     {
                         "name": "Super Rod Rod (Route 24/25/Cerulean/Cerulean Gym) (Vanilla)",
                         "hosted_item": "Psyduck, Goldeen, Krabby",
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
                         ],
                         "clear_as_group": false,
                         "access_rules": [
-                            "superrod, @Kanto/Cerulean City"
+                            "^$CanReach|Route 24/25/Cerulean/Cerulean Gym Fishing"
                         ]
                     },
                     {
@@ -2778,18 +3282,19 @@
                             "opt_encounter_ten"
                         ],
                         "access_rules": [
-                            "superrod, @Kanto/Vermilion City"
+                            "^$CanReach|Route 6/11/Vermilion/Dock Fishing"
                         ]
                     },
                     {
                         "name": "Super Rod Rod (Route 6/11/Vermillion/Dock) (Vanilla)",
                         "hosted_item": "Goldeen, Poliwag",
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
                         ],
                         "clear_as_group": false,
                         "access_rules": [
-                            "superrod, @Kanto/Vermilion City"
+                            "^$CanReach|Route 6/11/Vermilion/Dock Fishing"
                         ]
                     },
                     {
@@ -2803,18 +3308,19 @@
                             "opt_encounter_ten"
                         ],
                         "access_rules": [
-                            "superrod, @Kanto/Celadon City"
+                            "^$CanReach|Route 10/Celadon Fishing"
                         ]
                     },
                     {
                         "name": "Super Rod Rod (Route 10 & Celadon) (Vanilla)",
                         "hosted_item": "Poliwhirl, Slowpoke",
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
                         ],
                         "clear_as_group": false,
                         "access_rules": [
-                            "superrod, @Kanto/Celadon City"
+                            "^$CanReach|Route 10/Celadon Fishing"
                         ]
                     },
                     {
@@ -2828,18 +3334,19 @@
                             "opt_encounter_ten"
                         ],
                         "access_rules": [
-                            "superrod, @Kanto/Safari Zone"
+                            "^$CanReach|Safari Zone Fishing"
                         ]
                     },
                     {
                         "name": "Super Rod Rod (Safari Zone) (Vanilla)",
                         "hosted_item": "Dratini, Krabby, Psyduck, Slowpoke",
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
                         ],
                         "clear_as_group": false,
                         "access_rules": [
-                            "superrod, @Kanto/Safari Zone"
+                            "^$CanReach|Safari Zone Fishing"
                         ]
                     },
                     {
@@ -2853,20 +3360,19 @@
                             "opt_encounter_ten"
                         ],
                         "access_rules": [
-                            "superrod, @Kanto/Lavender Town", //rt 12 north can be accessed from Lavender and has the same rules
-                            "superrod, @Kanto/Fuchsia City" //12 South, 13, 17 and 18 can all be accessed from Fuchsia. Bicycle Road doesn't matter because if you can get there you can get to 17
+                            "^$CanReach|Route 12/13/17/18 Fishing"
                         ]
                     },
                     {
                         "name": "Super Rod Rod (Route 12/13/17/18) (Vanilla)",
                         "hosted_item": "Tentacool, Krabby, Goldeen, Magikarp",
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
                         ],
                         "clear_as_group": false,
                         "access_rules": [
-                            "superrod, @Kanto/Lavender Town", //rt 12 north can be accessed from Lavender and has the same rules
-                            "superrod, @Kanto/Fuchsia City" //12 South, 13, 17 and 18 can all be accessed from Fuchsia. Bicycle Road doesn't matter because if you can get there you can get to 17
+                            "^$CanReach|Route 12/13/17/18 Fishing"
                         ]
                     },
                     {
@@ -2880,19 +3386,19 @@
                             "opt_encounter_ten"
                         ],
                         "access_rules": [
-                            "superrod, @Kanto/Cinnabar Island",
-                            "superrod, @Kanto/Fuchsia City" // this is because of Route 19
+                            "^$CanReach|Sea Routes/Cinnabar/Seafoam Fishing"
                         ]
                     },
                     {
                         "name": "Super Rod Rod (Route 19/20/21/Cinnabar/Seafoam Island) (Vanilla)",
                         "hosted_item": "Staryu, Horsea, Shellder, Goldeen",
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
                         ],
                         "clear_as_group": false,
                         "access_rules": [
-                            "superrod, @Kanto/Cinnabar Island"
+                            "^$CanReach|Sea Routes/Cinnabar/Seafoam Fishing"
                         ]
                     },
                     {
@@ -2906,20 +3412,19 @@
                             "opt_encounter_ten"
                         ],
                         "access_rules": [
-                            "superrod,^$rt23", //@ Rules don't work because all 
-                            "superrod, @Kanto/Cerulean Cave"
+                            "^$CanReach|Route 23/Cerulean Cave Fishing"
                         ]
                     },
                     {
                         "name": "Super Rod Rod (Route 23 & Cerulean Cave) (Vanilla)",
                         "hosted_item": "Slowbro, Seaking, Kingler, Seadra",
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
                         ],
                         "clear_as_group": false,
                         "access_rules": [
-                            "superrod, ^$rt23", //@ Rules don't work because all 
-                            "superrod, @Kanto/Cerulean Cave"
+                            "^$CanReach|Route 23/Cerulean Cave Fishing"
                         ]
                     },
                     {
@@ -2933,18 +3438,19 @@
                             "opt_encounter_ten"
                         ],
                         "access_rules": [
-                            "superrod, @Kanto/Fuchsia City"
+                            "^$CanReach|Fuchsia Fishing"
                         ]
                     },
                     {
                         "name": "Super Rod Rod (Fuchsia) (Vanilla)",
                         "hosted_item": "Seaking, Krabby, Goldeen, Magikarp",
                         "visibility_rules": [
-                            "opt_encounter_red", "opt_encounter_blue"
+                            "opt_encounter_red",
+                            "opt_encounter_blue"
                         ],
                         "clear_as_group": false,
                         "access_rules": [
-                            "superrod, @Kanto/Fuchsia City"
+                            "^$CanReach|Fuchsia Fishing"
                         ]
                     }
                 ],
@@ -2961,10 +3467,12 @@
                 "access_rules": [],
                 "sections": [
                     {
-                    "name": "This map can only be operated manually.\nYou can backup your progress by Exporting the Tracker State\nin the top-left corner. You can then import it again.",
+                        "name": "This map can only be operated manually.\nYou can backup your progress by Exporting the Tracker State\nin the top-left corner. You can then import it again.",
                         "clear_as_group": false,
                         "visibility_rules": [],
-                        "access_rules": [""],
+                        "access_rules": [
+                            ""
+                        ],
                         "chest_unopened_img": "images/items/doesnotexist.png",
                         "chest_opened_img": "images/items/doesnotexist.png"
                     },
@@ -2977,14 +3485,6 @@
                         "chest_unopened_img": "images/items/doesnotexist.png",
                         "chest_opened_img": "images/items/doesnotexist.png"
                     }
-                    //{
-                    //    "name": "With the above setting you can trigger whether you got\n1:1 mapping (original number of PKMN per place) or\nFull mapping (10 PKMN per place)",
-                    //    "clear_as_group": false,
-                    //    "visibility_rules": [],
-                    //    "access_rules": [],
-                    //    "chest_unopened_img": "images/items/doesnotexist.png",
-                    //    "chest_opened_img": "images/items/doesnotexist.png"
-                    //}
                 ],
                 "map_locations": [
                     {
@@ -2998,4 +3498,3 @@
         ]
     }
 ]
-

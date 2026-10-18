@@ -24,7 +24,8 @@ STAGE_CODES = {
     require_pokedex = "opt_dex_required",
     area_1_to_1_mapping = "opt_encounter",
     split_card_key = "opt_cardkey",
-    exp_all = "opt_exp_all"
+    exp_all = "opt_exp_all",
+    all_elevators_locked = "opt_elevators_locked"
 }
 
 AMOUNT_CODES = {
@@ -36,7 +37,6 @@ AMOUNT_CODES = {
 
 IGNORED_CODES = {
     -- Unimplemented because logic irrelevant for Poptracker
-    all_elevators_locked = "",
     type_chart = "",
     v5_update = "",
     death_link = "",

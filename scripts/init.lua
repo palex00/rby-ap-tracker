@@ -16,6 +16,20 @@ ScriptHost:LoadScript("scripts/utils.lua")
 ScriptHost:LoadScript("scripts/logic/logic.lua")
 ScriptHost:LoadScript("scripts/custom_items.lua")
 
+-- CanReach region graph (locations bind to it with "^$CanReach|<apworld region>").
+-- Order matters, the graph is built imperatively: helpers -> engine -> nodes -> connections.
+-- logic.lua must come first: connections.lua captures its rule functions (surf, cut, ...) at
+-- load time. There is no separate dark-area pass and no check-leaf file, unlike Crystal:
+--   * Rock Tunnel's darkness is already on the graph's edges. The apworld splits each Rock
+--     Tunnel room into door landings ("Rock Tunnel 1F-S 1") and the dark interior ("Rock Tunnel
+--     1F-S"), with rock_tunnel() on the edges between them, so a shuffled door into Rock Tunnel
+--     still has to pass the Flash gate.
+--   * Location-specific rules (hidden items, Coin Case, ...) are ANDed in the location JSON.
+ScriptHost:LoadScript("scripts/logic/logic_helpers.lua")
+ScriptHost:LoadScript("scripts/logic/canreach.lua")
+ScriptHost:LoadScript("scripts/logic/regions/region_definitions.lua")
+ScriptHost:LoadScript("scripts/logic/regions/connections.lua")
+
 -- Items
 Tracker:AddItems("items/items.json")
 Tracker:AddItems("items/options.json")

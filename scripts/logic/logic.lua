@@ -33,83 +33,45 @@ function pokedex_count()
     return (100 * hundreds) + (10 * tens) + ones
 end
 
--- returns whether we have enough fossils for a second check
-function enough_fossils()
-    local fossils = Tracker:ProviderCountForCode("fossil")
-    local fossils_req = Tracker:FindObjectForCode('opt_fossilcheck').AcquiredCount
-    return fossils >= fossils_req
-end
-
 -- HM CHECKS
 
 --a table for lookups
 badges = {"boulder", "cascade", "thunder", "rainbow", "soul", "marsh", "volcano", "earth"}
 
-function cut()
-    obj = Tracker:FindObjectForCode('cut')
-    stage = 0
-    extra = AccessibilityLevel.None
+-- An HM is usable with its vanilla badge, with no badges needed at all (opt_hm_off), or with
+-- the extra badge its item stage names: stage 0 none, 1-8 the badges above, 9 no requirement.
+local function hm(code, badge)
+    local obj = Tracker:FindObjectForCode(code)
+    local extra = AccessibilityLevel.None
     if obj then
-        stage = obj.CurrentStage
-        if stage > 0 then
+        local stage = obj.CurrentStage
+        if stage > #badges then
+            extra = AccessibilityLevel.Normal
+        elseif stage > 0 then
             extra = has(badges[stage])
         end
     end
-    return access(has('cut'),max(has('cascade'),has('opt_hm_off'),extra))
+    return access(has(code), max(has(badge), has('opt_hm_off'), extra))
+end
+
+function cut()
+    return hm('cut', 'cascade')
 end
 
 function fly()
-    obj = Tracker:FindObjectForCode('fly')
-    stage = 0
-    extra = AccessibilityLevel.None
-    if obj then
-        stage = obj.CurrentStage
-        if stage > 0 then
-            extra = has(badges[stage])
-        end
-    end
-
-    return access(has('fly'), max(has('thunder'),has('opt_hm_off'),extra))
+    return hm('fly', 'thunder')
 end
 
 function surf()
-    obj = Tracker:FindObjectForCode('surf')
-    stage = 0
-    extra = AccessibilityLevel.None
-    if obj then
-        stage = obj.CurrentStage
-        if stage > 0 then
-            extra = has(badges[stage])
-        end
-    end
-    return access(has('surf'), max(has('soul'),has('opt_hm_off'),extra))
+    return hm('surf', 'soul')
 end
 
 function strength()
-    obj = Tracker:FindObjectForCode('strength')
-    stage = 0
-    extra = AccessibilityLevel.None
-    if obj then
-        stage = obj.CurrentStage
-        if stage > 0 then
-            extra = has(badges[stage])
-        end
-    end
-
-    return access(has('strength'), max(has('rainbow'),has('opt_hm_off'),extra))
+    return hm('strength', 'rainbow')
 end
 
 function flash()
-    obj = Tracker:FindObjectForCode('flash')
-    stage = 0
-    extra = AccessibilityLevel.None
-    if obj then
-        stage = obj.CurrentStage
-        if stage > 0 then
-            extra = has(badges[stage])
-        end
-    end
-    return access(has('flash'), max(has('boulder'),has('opt_hm_off'),extra))
+    return hm('flash', 'boulder')
 end
 
 function flyto(location)
@@ -122,6 +84,7 @@ function cardkey(floor)
     if has_new("cardkey") or has_new("cardkey"..floor.."f") or (Tracker:FindObjectForCode("cardkey_progressive").CurrentStage >= floor-1) then
         return AccessibilityLevel.Normal
     end
+    return AccessibilityLevel.None
 end
 
 function hidden()
@@ -179,16 +142,45 @@ function officer()
     end
 end
 
--- LOCATION ACCESS CHECKS
-function tea()
-    local celadon = Tracker:FindObjectForCode("@Kanto/Celadon City").AccessibilityLevel
-    
+-- REGION GRAPH CHECKS
+-- These run inside the CanReach flood fill (connections.lua), so they read other regions
+-- through reach(), never through a location's AccessibilityLevel.
+
+-- Saffron's gate guards: Tea, or a drink from the Celadon Department Store roof vending machines.
+function pass_guards()
     if has_new("opt_tea_on") then
         return has("tea")
-    else
-        return celadon
     end
+    return reach("Celadon Department Store Roof")
 end
+
+-- Leaving a Silph Co / Celadon Department Store elevator.
+function elevator_unlocked()
+    return max(has("opt_elevators_locked_off"), has("liftkey"))
+end
+
+-- The six Seafoam Exit Boulder events: every boulder room must be reachable.
+function seafoam_exit_boulders()
+    return ALL(
+        reach("Seafoam Islands 1F"),
+        reach("Seafoam Islands B1F"),
+        reach("Seafoam Islands B1F-NE"),
+        reach("Seafoam Islands B2F-NW"),
+        reach("Seafoam Islands B2F-NE")
+    )
+end
+
+-- The apworld's fossil_checks() for the second fossil check: the Mt Moon fossil, the Cinnabar
+-- Lab and Cinnabar Island events, plus as many fossils as the second fossil check condition.
+function fossil_checks()
+    local fossils_req = Tracker:FindObjectForCode("opt_fossilcheck").AcquiredCount
+    if Tracker:ProviderCountForCode("fossil") < fossils_req then
+        return AccessibilityLevel.None
+    end
+    return ALL(reach("Mt Moon B2F"), reach("Cinnabar Lab"), reach("Cinnabar Island"))
+end
+
+-- LOCATION ACCESS CHECKS
 
 function gyms()
     return
@@ -284,20 +276,6 @@ function ceruleancave()
     local key_item_req = 10 * tens + ones
     if key_items_count() >= key_item_req and badges_count() >= badge_req then
         return AccessibilityLevel.Normal
-    end
-    return AccessibilityLevel.None
-end
-
-function fossils()
-	local er = has("opt_er_on")
-    local mt_moon = Tracker:FindObjectForCode("@Kanto/Mt Moon").AccessibilityLevel
-    local cinnabar = Tracker:FindObjectForCode("@Kanto/Cinnabar Island").AccessibilityLevel
-    
-    if mt_moon == AccessibilityLevel.Normal or er == AccessibilityLevel.Normal then
-        if (cinnabar == AccessibilityLevel.Normal or er == AccessibilityLevel.Normal) and enough_fossils() then
-            return AccessibilityLevel.Normal
-        end
-        return AccessibilityLevel.SequenceBreak
     end
     return AccessibilityLevel.None
 end
