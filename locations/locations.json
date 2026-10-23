@@ -6945,6 +6945,50 @@
                         "visibility_rules": [
                             "show_entrances, $er_shown|Saffron Copycat's House 1F to Saffron Copycat's House 2F"
                         ]
+                    },
+                    {
+                        "name": "Route 5 Gate South Entrance                                                                       ",
+                        "hosted_item": "Route 5-S to Route 5 Gate-S",
+                        "clear_as_group": false,
+                        "access_rules": [
+                            "^$CanReach|Route 5-S"
+                        ],
+                        "visibility_rules": [
+                            "show_entrances, $er_shown|Route 5-S to Route 5 Gate-S"
+                        ]
+                    },
+                    {
+                        "name": "Route 6 Gate North Entrance                                                                       ",
+                        "hosted_item": "Route 6-N to Route 6 Gate-N",
+                        "clear_as_group": false,
+                        "access_rules": [
+                            "^$CanReach|Route 6-N"
+                        ],
+                        "visibility_rules": [
+                            "show_entrances, $er_shown|Route 6-N to Route 6 Gate-N"
+                        ]
+                    },
+                    {
+                        "name": "Route 7 Gate East Entrance                                                                          ",
+                        "hosted_item": "Route 7-E to Route 7 Gate-E",
+                        "clear_as_group": false,
+                        "access_rules": [
+                            "^$CanReach|Route 7-E"
+                        ],
+                        "visibility_rules": [
+                            "show_entrances, $er_shown|Route 7-E to Route 7 Gate-E"
+                        ]
+                    },
+                    {
+                        "name": "Route 8 Gate West Entrance                                                                        ",
+                        "hosted_item": "Route 8-W to Route 8 Gate-W",
+                        "clear_as_group": false,
+                        "access_rules": [
+                            "^$CanReach|Route 8-W"
+                        ],
+                        "visibility_rules": [
+                            "show_entrances, $er_shown|Route 8-W to Route 8 Gate-W"
+                        ]
                     }
                 ],
                 "map_locations": [
@@ -13290,17 +13334,6 @@
                         ]
                     },
                     {
-                        "name": "Route 8 Gate West Entrance                                                                        ",
-                        "hosted_item": "Route 8-W to Route 8 Gate-W",
-                        "clear_as_group": false,
-                        "access_rules": [
-                            "^$CanReach|Route 8-W"
-                        ],
-                        "visibility_rules": [
-                            "show_entrances, $er_shown|Route 8-W to Route 8 Gate-W"
-                        ]
-                    },
-                    {
                         "name": "Route 8 Gate East Entrance                                                                          ",
                         "hosted_item": "Route 8 to Route 8 Gate-E",
                         "clear_as_group": false,
@@ -13455,17 +13488,6 @@
                         ],
                         "visibility_rules": [
                             "show_entrances, $er_shown|Route 6 to Underground Path Route 6"
-                        ]
-                    },
-                    {
-                        "name": "Route 6 Gate North Entrance                                                                       ",
-                        "hosted_item": "Route 6-N to Route 6 Gate-N",
-                        "clear_as_group": false,
-                        "access_rules": [
-                            "^$CanReach|Route 6-N"
-                        ],
-                        "visibility_rules": [
-                            "show_entrances, $er_shown|Route 6-N to Route 6 Gate-N"
                         ]
                     }
                 ],
@@ -14116,17 +14138,6 @@
                         ]
                     },
                     {
-                        "name": "Route 5 Gate South Entrance                                                                       ",
-                        "hosted_item": "Route 5-S to Route 5 Gate-S",
-                        "clear_as_group": false,
-                        "access_rules": [
-                            "^$CanReach|Route 5-S"
-                        ],
-                        "visibility_rules": [
-                            "show_entrances, $er_shown|Route 5-S to Route 5 Gate-S"
-                        ]
-                    },
-                    {
                         "name": "Daycare Exit                                                                                                  ",
                         "hosted_item": "Daycare to Route 5",
                         "clear_as_group": false,
@@ -14192,17 +14203,6 @@
                         ],
                         "visibility_rules": [
                             "show_entrances, $er_shown|Route 7 to Underground Path Route 7"
-                        ]
-                    },
-                    {
-                        "name": "Route 7 Gate East Entrance                                                                          ",
-                        "hosted_item": "Route 7-E to Route 7 Gate-E",
-                        "clear_as_group": false,
-                        "access_rules": [
-                            "^$CanReach|Route 7-E"
-                        ],
-                        "visibility_rules": [
-                            "show_entrances, $er_shown|Route 7-E to Route 7 Gate-E"
                         ]
                     }
                 ],

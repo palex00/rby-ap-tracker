@@ -1179,8 +1179,8 @@ ENTRANCE_REGISTRY = {
     },
     ["Route 7-E to Route 7 Gate-E"] = {
         pretty = "Route 7 Gate East Entrance",
-        tab = {"Submaps", "Routes", "Route 7", "Route"},
-        section = "@Kanto/Route 7/Route 7 Gate East Entrance                                                                          ",
+        tab = {"Submaps", "Cities", "Saffron City", "City"},
+        section = "@Kanto/Saffron City/Route 7 Gate East Entrance                                                                          ",
     },
     ["Player's House 1F to Pallet Town"] = {
         pretty = "Player's House Exit",
@@ -1814,8 +1814,8 @@ ENTRANCE_REGISTRY = {
     },
     ["Route 5-S to Route 5 Gate-S"] = {
         pretty = "Route 5 Gate South Entrance",
-        tab = {"Submaps", "Routes", "Route 5", "Route"},
-        section = "@Kanto/Route 5/Route 5 Gate South Entrance                                                                       ",
+        tab = {"Submaps", "Cities", "Saffron City", "City"},
+        section = "@Kanto/Saffron City/Route 5 Gate South Entrance                                                                       ",
     },
     ["Vermilion Old Rod House to Vermilion City"] = {
         pretty = "Vermilion Old Rod House Exit",
@@ -1904,13 +1904,13 @@ ENTRANCE_REGISTRY = {
     },
     ["Route 6-N to Route 6 Gate-N"] = {
         pretty = "Route 6 Gate North Entrance",
-        tab = {"Submaps", "Routes", "Route 6", "Route"},
-        section = "@Kanto/Route 6/Route 6 Gate North Entrance                                                                       ",
+        tab = {"Submaps", "Cities", "Saffron City", "City"},
+        section = "@Kanto/Saffron City/Route 6 Gate North Entrance                                                                       ",
     },
     ["Route 8-W to Route 8 Gate-W"] = {
         pretty = "Route 8 Gate West Entrance",
-        tab = {"Submaps", "Routes", "Route 8", "Route"},
-        section = "@Kanto/Route 8/Route 8 Gate West Entrance                                                                        ",
+        tab = {"Submaps", "Cities", "Saffron City", "City"},
+        section = "@Kanto/Saffron City/Route 8 Gate West Entrance                                                                        ",
     },
     ["Route 8 to Route 8 Gate-E"] = {
         pretty = "Route 8 Gate East Entrance",

@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Submaps: Deep (group)",
+        "children": [
+{"name": "Erika", "sections": [{"name": "Beat Erika (Event)", "ref": "Kanto/Celadon City/Beat Erika (Event)"}, {"name": "Erika", "ref": "Kanto/Celadon City/Erika"}, {"name": "​Erika", "ref": "Kanto/Celadon City/​Erika"}], "map_locations": [{"map": "celadongym", "x": 72, "y": 56}]},
+{"name": "Misty", "sections": [{"name": "Beat Misty (Event)", "ref": "Kanto/Cerulean City/Beat Misty (Event)"}, {"name": "Misty", "ref": "Kanto/Cerulean City/Misty"}, {"name": "​Misty", "ref": "Kanto/Cerulean City/​Misty"}], "map_locations": [{"map": "ceruleangym", "x": 72, "y": 40}]},
+{"name": "Blaine", "sections": [{"name": "Beat Blaine (Event)", "ref": "Kanto/Cinnabar Island/Beat Blaine (Event)"}, {"name": "Blaine", "ref": "Kanto/Cinnabar Island/Blaine"}, {"name": "​Blaine", "ref": "Kanto/Cinnabar Island/​Blaine"}], "map_locations": [{"map": "cinnabargym", "x": 56, "y": 56}]},
+{"name": "Koga", "sections": [{"name": "Beat Koga (Event)", "ref": "Kanto/Fuchsia City/Beat Koga (Event)"}, {"name": "Koga", "ref": "Kanto/Fuchsia City/Koga"}, {"name": "​Koga", "ref": "Kanto/Fuchsia City/​Koga"}], "map_locations": [{"map": "fuchsiagym", "x": 72, "y": 168}]},
+{"name": "Brock", "sections": [{"name": "Beat Brock (Event)", "ref": "Kanto/Pewter City/Beat Brock (Event)"}, {"name": "Brock", "ref": "Kanto/Pewter City/Brock"}, {"name": "​Brock", "ref": "Kanto/Pewter City/​Brock"}], "map_locations": [{"map": "pewtergym", "x": 72, "y": 24}]},
+{"name": "Sabrina", "sections": [{"name": "Beat Sabrina (Event)", "ref": "Kanto/Saffron City/Beat Sabrina (Event)"}, {"name": "Sabrina", "ref": "Kanto/Saffron City/Sabrina"}, {"name": "​Sabrina", "ref": "Kanto/Saffron City/​Sabrina"}], "map_locations": [{"map": "saffrongym", "x": 152, "y": 136}]},
+{"name": "Lt. Surge", "sections": [{"name": "Beat Lt. Surge (Event)", "ref": "Kanto/Vermilion City/Beat Lt. Surge (Event)"}, {"name": "Lt. Surge", "ref": "Kanto/Vermilion City/Lt. Surge"}, {"name": "​Lt. Surge", "ref": "Kanto/Vermilion City/​Lt. Surge"}], "map_locations": [{"map": "vermiliongym", "x": 88, "y": 24}]},
+{"name": "Giovanni", "sections": [{"name": "Beat Giovanni (Event)", "ref": "Kanto/Viridian City/Beat Giovanni (Event)"}, {"name": "Giovanni", "ref": "Kanto/Viridian City/Giovanni"}, {"name": "​Giovanni", "ref": "Kanto/Viridian City/​Giovanni"}], "map_locations": [{"map": "viridiangym", "x": 40, "y": 24}]},
+{"name": "Oak", "sections": [{"name": "Give Oak his Parcel (Event)", "ref": "Kanto/Pallet Town/Give Oak his Parcel (Event)"}, {"name": "Oak's Parcel Reward", "ref": "Kanto/Pallet Town/Oak's Parcel Reward"}, {"name": "Oak's Post-Route-22-Rival Gift", "ref": "Kanto/Pallet Town/Oak's Post-Route-22-Rival Gift"}], "map_locations": [{"map": "oakslab", "x": 88, "y": 40}]},
+{"name": "Thirsty Girl", "sections": [{"name": "Rooftop Thirsty Girl Water", "ref": "Kanto/Celadon City/Rooftop Thirsty Girl Water"}, {"name": "Rooftop Thirsty Girl Soda Pop", "ref": "Kanto/Celadon City/Rooftop Thirsty Girl Soda Pop"}, {"name": "Rooftop Thirsty Girl Lemonade", "ref": "Kanto/Celadon City/Rooftop Thirsty Girl Lemonade"}], "map_locations": [{"map": "celadonmartroof", "x": 88, "y": 88}]},
+{"name": "Bill", "sections": [{"name": "Bill", "ref": "Kanto/Route 25/Bill"}, {"name": "Help Bill (Event)", "ref": "Kanto/Route 25/Help Bill (Event)"}], "map_locations": [{"map": "billshouse", "x": 72, "y": 72}]},
+{"name": "Lab Fossils", "sections": [{"name": "Fossil A", "ref": "Kanto/Fossil/Fossil A"}, {"name": "Fossil B", "ref": "Kanto/Fossil/Fossil B"}], "map_locations": [{"map": "cinnabarlabfossilroom", "x": 88, "y": 40}]}
+        ]
+    }
+]
