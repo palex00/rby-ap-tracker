@@ -218,6 +218,19 @@ function onMap(value)
     end
 end
 
+-- AddLayouts rebuilds the whole view, so only load on change
+local QUICK_SETTINGS_LAYOUT = "layouts/settings_quick.json"
+function toggle_quick_settings()
+    local path = "layouts/settings_quick.json"
+    if Tracker:FindObjectForCode("er_doors").CurrentStage > 0 then
+        path = "layouts/settings_quick_er.json"
+    end
+    if path ~= QUICK_SETTINGS_LAYOUT then
+        QUICK_SETTINGS_LAYOUT = path
+        Tracker:AddLayouts(path)
+    end
+end
+
 function toggle_itemgrid()
     local stones = Tracker:FindObjectForCode("opt_stonesanity").CurrentStage == 1
     

@@ -1,0 +1,138 @@
+[
+    {
+        "name": "Player's House Entrance",
+        "sections": [
+            {
+                "name": "Player's House Entrance                                                                              ",
+                "ref": "Kanto/Pallet Town/Player's House Entrance                                                                              "
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "pallettown",
+                "x": 88,
+                "y": 88,
+                "shape": "trapezoid"
+            }
+        ]
+    },
+    {
+        "name": "Rival's House Entrance",
+        "sections": [
+            {
+                "name": "Rival's House Entrance                                                                                 ",
+                "ref": "Kanto/Pallet Town/Rival's House Entrance                                                                                 "
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "pallettown",
+                "x": 216,
+                "y": 88,
+                "shape": "trapezoid"
+            }
+        ]
+    },
+    {
+        "name": "Oak's Lab Entrance",
+        "sections": [
+            {
+                "name": "Oak's Lab Entrance                                                                                       ",
+                "ref": "Kanto/Pallet Town/Oak's Lab Entrance                                                                                       "
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "pallettown",
+                "x": 200,
+                "y": 184,
+                "shape": "trapezoid"
+            }
+        ]
+    },
+    {
+        "name": "Rival's House Exit",
+        "sections": [
+            {
+                "name": "Rival's House Exit                                                                                         ",
+                "ref": "Kanto/Pallet Town/Rival's House Exit                                                                                         "
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "blueshouse",
+                "x": 48,
+                "y": 120,
+                "shape": "trapezoid"
+            }
+        ]
+    },
+    {
+        "name": "Oak's Lab Exit",
+        "sections": [
+            {
+                "name": "Oak's Lab Exit                                                                                               ",
+                "ref": "Kanto/Pallet Town/Oak's Lab Exit                                                                                               "
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "oakslab",
+                "x": 80,
+                "y": 184,
+                "shape": "trapezoid"
+            }
+        ]
+    },
+    {
+        "name": "Player's House Exit",
+        "sections": [
+            {
+                "name": "Player's House Exit                                                                                      ",
+                "ref": "Kanto/Pallet Town/Player's House Exit                                                                                      "
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "redshouse1f",
+                "x": 48,
+                "y": 120,
+                "shape": "trapezoid"
+            }
+        ]
+    },
+    {
+        "name": "Player's House 1F Stairs",
+        "sections": [
+            {
+                "name": "Player's House 1F Stairs                                                                              ",
+                "ref": "Kanto/Pallet Town/Player's House 1F Stairs                                                                              "
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "redshouse1f",
+                "x": 120,
+                "y": 24,
+                "shape": "trapezoid"
+            }
+        ]
+    },
+    {
+        "name": "Player's House 2F Stairs",
+        "sections": [
+            {
+                "name": "Player's House 2F Stairs                                                                              ",
+                "ref": "Kanto/Pallet Town/Player's House 2F Stairs                                                                              "
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "redshouse2f",
+                "x": 120,
+                "y": 24,
+                "shape": "trapezoid"
+            }
+        ]
+    }
+]

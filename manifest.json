@@ -5,7 +5,7 @@
     "package_uid": "pokemonrb_ap_palex00",
     "author": "palex00",
     "versions_url": "https://raw.githubusercontent.com/palex00/rby-ap-tracker/versions/versions.json",
-    "min_poptracker_version": "0.30.4",
+    "min_poptracker_version": "0.35.4",
     "variants": {
         "standard": {
             "display_name": "Full Tracker",

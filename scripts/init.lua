@@ -30,6 +30,12 @@ ScriptHost:LoadScript("scripts/logic/canreach.lua")
 ScriptHost:LoadScript("scripts/logic/regions/region_definitions.lua")
 ScriptHost:LoadScript("scripts/logic/regions/connections.lua")
 
+ScriptHost:LoadScript("scripts/entrances/entrance_registry.lua")
+ScriptHost:LoadScript("scripts/entrances/entrance_item.lua")
+ScriptHost:LoadScript("scripts/entrances/er_state.lua")
+ScriptHost:LoadScript("scripts/routing/route_mode.lua")
+BuildEntranceKinds()
+
 -- Items
 Tracker:AddItems("items/items.json")
 Tracker:AddItems("items/options.json")
@@ -48,6 +54,8 @@ Tracker:AddLocations("locations/encountertab.json")
 Tracker:AddLocations("locations/pokedex.json")
 Tracker:AddLocations("locations/submaps_singlechecks.json")
 Tracker:AddLocations("locations/submaps_groupchecks.json")
+Tracker:AddLocations("locations/meta_entrance.json")
+Tracker:AddLocations("locations/submaps_entrances.json")
 
 -- Layout
 Tracker:AddLayouts("layouts/items_main_1_full.json")
@@ -76,6 +84,11 @@ ScriptHost:AddWatchForCode("splitmap", "splitmap", toggle_splitmap)
 ScriptHost:AddWatchForCode("opt_extra_boulders", "opt_extra_boulders", toggle_boulders)
 ScriptHost:AddWatchForCode("colormap3", "colormap", toggle_extra_key_items)
 ScriptHost:AddWatchForCode("opt_extra_key_items2", "opt_extra_key_items", toggle_extra_key_items)
+
+ScriptHost:AddWatchForCode("er_doors", "er_doors", RefreshERSettings)
+ScriptHost:AddWatchForCode("er_doors_layout", "er_doors", toggle_quick_settings)
+ScriptHost:AddWatchForCode("er_warp_tiles", "er_warp_tiles", RefreshERSettings)
+RefreshERSettings()
 
 initialize_watch_items()
 

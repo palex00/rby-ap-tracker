@@ -18,16 +18,11 @@ NAMED_NODES = {}
 ---@type string[]
 NAMED_NODES_KEYS = {}
 
--- Door-shuffle settings for this seed. All off until the ER settings are wired up; with these
--- defaults WarpShuffled() is false for every warp, so the whole graph is vanilla.
---   door_shuffle: slot_data door_shuffle (0 off, 1 simple, 2 interiors, 3 full, 4 insanity,
---                 5 decoupled)
---   warp_tiles:   Silph Co / Saffron Gym warp tiles randomized
---   rock_tunnel_randomized: Rock Tunnel's layout randomized (its own doors then stay vanilla)
-ER_SETTINGS = { door_shuffle = 0, warp_tiles = false, rock_tunnel_randomized = false }
+-- door_shuffle: 0 off, 1 simple, 2 interiors, 3 full, 4 insanity, 5 decoupled
+-- Randomize Rock Tunnel isn't in slot_data, its ladders just count as shuffled from Full up.
+ER_SETTINGS = { door_shuffle = 0, warp_tiles = false }
 
--- Manual links: warp token -> token of the door the player came out of. Empty until manual
--- linking exists.
+-- warp token -> token of the door you came out of, owned by er_state.lua
 ER_LINKS = {}
 
 -- warp token -> name of the region the warp sits in (its "mouth"); filled by connect_warp.
@@ -138,7 +133,6 @@ end
 
 --- Whether a warp of this ER kind is shuffled under the current settings. Mirrors
 --- door_shuffle() in regions.py (the order of the checks matters):
----   * Rock Tunnel's own doors stay vanilla when Rock Tunnel is randomized
 ---   * warp tiles follow their own setting only
 ---   * fixed pairs (Player's House stairs, Elite Four, Safari Zone in Simple/Interiors, Fuchsia
 ---     <-> Safari Zone Gate in Simple) are always paired vanilla, so they are not shuffled here
@@ -147,9 +141,6 @@ end
 ---@param er table
 ---@return boolean
 function WarpShuffled(er)
-    if er.rock_tunnel and ER_SETTINGS.rock_tunnel_randomized then
-        return false
-    end
     if er.warp_tile then
         return ER_SETTINGS.warp_tiles
     end

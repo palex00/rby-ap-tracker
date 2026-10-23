@@ -27,7 +27,6 @@ local R = NAMED_NODES
 -- ER kinds (see door_shuffle() in regions.py). Shared tables; WarpShuffled() reads them.
 local ER_EXTERIOR = {} -- exterior <-> interior: shuffled from Simple up
 local ER_INTERIOR = { interior = true } -- interior <-> interior: shuffled from Full up
-local ER_ROCK_TUNNEL = { interior = true, rock_tunnel = true } -- Rock Tunnel's own doors: as ER_INTERIOR, but vanilla when Rock Tunnel is randomized
 local ER_WARP_TILE = { warp_tile = true } -- Silph Co / Saffron Gym warp tiles: own setting
 local ER_SIMPLE_ON = { interior = true, simple = true } -- Game Corner stairs <-> Rocket Hideout B1F: interior, but Simple shuffles it
 local ER_SIMPLE_OFF = { simple = false } -- Celadon City <-> Game Corner: exterior, but Simple keeps it
@@ -504,15 +503,15 @@ R["Rock Tunnel 1F-NE 1"]:connect_warp(R["Route 10-N"], "Rock Tunnel 1F-NE 1 to R
 
 -- === Rock Tunnel 1F-NE 2 ===
 R["Rock Tunnel 1F-NE 2"]:connect_one_way(R["Rock Tunnel 1F-NE"], "Rock Tunnel 1F-NE 2 to Rock Tunnel 1F-NE", rock_tunnel)
-R["Rock Tunnel 1F-NE 2"]:connect_warp(R["Rock Tunnel B1F-E 1"], "Rock Tunnel 1F-NE 2 to Rock Tunnel B1F-E 1", ER_ROCK_TUNNEL)
+R["Rock Tunnel 1F-NE 2"]:connect_warp(R["Rock Tunnel B1F-E 1"], "Rock Tunnel 1F-NE 2 to Rock Tunnel B1F-E 1", ER_INTERIOR)
 
 -- === Rock Tunnel 1F-NW 1 ===
 R["Rock Tunnel 1F-NW 1"]:connect_one_way(R["Rock Tunnel 1F-NW"], "Rock Tunnel 1F-NW 1 to Rock Tunnel 1F-NW", rock_tunnel)
-R["Rock Tunnel 1F-NW 1"]:connect_warp(R["Rock Tunnel B1F-E 2"], "Rock Tunnel 1F-NW 1 to Rock Tunnel B1F-E 2", ER_ROCK_TUNNEL)
+R["Rock Tunnel 1F-NW 1"]:connect_warp(R["Rock Tunnel B1F-E 2"], "Rock Tunnel 1F-NW 1 to Rock Tunnel B1F-E 2", ER_INTERIOR)
 
 -- === Rock Tunnel 1F-NW 2 ===
 R["Rock Tunnel 1F-NW 2"]:connect_one_way(R["Rock Tunnel 1F-NW"], "Rock Tunnel 1F-NW 2 to Rock Tunnel 1F-NW", rock_tunnel)
-R["Rock Tunnel 1F-NW 2"]:connect_warp(R["Rock Tunnel B1F-W 1"], "Rock Tunnel 1F-NW 2 to Rock Tunnel B1F-W 1", ER_ROCK_TUNNEL)
+R["Rock Tunnel 1F-NW 2"]:connect_warp(R["Rock Tunnel B1F-W 1"], "Rock Tunnel 1F-NW 2 to Rock Tunnel B1F-W 1", ER_INTERIOR)
 
 -- === Rock Tunnel 1F-S 1 ===
 R["Rock Tunnel 1F-S 1"]:connect_one_way(R["Rock Tunnel 1F-S"], "Rock Tunnel 1F-S 1 to Rock Tunnel 1F-S", rock_tunnel)
@@ -520,7 +519,7 @@ R["Rock Tunnel 1F-S 1"]:connect_warp(R["Route 10-S"], "Rock Tunnel 1F-S 1 to Rou
 
 -- === Rock Tunnel 1F-S 2 ===
 R["Rock Tunnel 1F-S 2"]:connect_one_way(R["Rock Tunnel 1F-S"], "Rock Tunnel 1F-S 2 to Rock Tunnel 1F-S", rock_tunnel)
-R["Rock Tunnel 1F-S 2"]:connect_warp(R["Rock Tunnel B1F-W 2"], "Rock Tunnel 1F-S 2 to Rock Tunnel B1F-W 2", ER_ROCK_TUNNEL)
+R["Rock Tunnel 1F-S 2"]:connect_warp(R["Rock Tunnel B1F-W 2"], "Rock Tunnel 1F-S 2 to Rock Tunnel B1F-W 2", ER_INTERIOR)
 
 -- === Rock Tunnel 1F-NE ===
 R["Rock Tunnel 1F-NE"]:connect_one_way(R["Rock Tunnel 1F-NE 1"], "Rock Tunnel 1F-NE to Rock Tunnel 1F-NE 1", rock_tunnel)
@@ -762,19 +761,19 @@ R["Cerulean Cave B1F"]:connect_warp(R["Cerulean Cave 1F-NW"], "Cerulean Cave B1F
 
 -- === Rock Tunnel B1F-E 1 ===
 R["Rock Tunnel B1F-E 1"]:connect_one_way(R["Rock Tunnel B1F-E"], "Rock Tunnel B1F-E 1 to Rock Tunnel B1F-E", rock_tunnel)
-R["Rock Tunnel B1F-E 1"]:connect_warp(R["Rock Tunnel 1F-NE 2"], "Rock Tunnel B1F-E 1 to Rock Tunnel 1F-NE 2", ER_ROCK_TUNNEL)
+R["Rock Tunnel B1F-E 1"]:connect_warp(R["Rock Tunnel 1F-NE 2"], "Rock Tunnel B1F-E 1 to Rock Tunnel 1F-NE 2", ER_INTERIOR)
 
 -- === Rock Tunnel B1F-E 2 ===
 R["Rock Tunnel B1F-E 2"]:connect_one_way(R["Rock Tunnel B1F-E"], "Rock Tunnel B1F-E 2 to Rock Tunnel B1F-E", rock_tunnel)
-R["Rock Tunnel B1F-E 2"]:connect_warp(R["Rock Tunnel 1F-NW 1"], "Rock Tunnel B1F-E 2 to Rock Tunnel 1F-NW 1", ER_ROCK_TUNNEL)
+R["Rock Tunnel B1F-E 2"]:connect_warp(R["Rock Tunnel 1F-NW 1"], "Rock Tunnel B1F-E 2 to Rock Tunnel 1F-NW 1", ER_INTERIOR)
 
 -- === Rock Tunnel B1F-W 1 ===
 R["Rock Tunnel B1F-W 1"]:connect_one_way(R["Rock Tunnel B1F-W"], "Rock Tunnel B1F-W 1 to Rock Tunnel B1F-W", rock_tunnel)
-R["Rock Tunnel B1F-W 1"]:connect_warp(R["Rock Tunnel 1F-NW 2"], "Rock Tunnel B1F-W 1 to Rock Tunnel 1F-NW 2", ER_ROCK_TUNNEL)
+R["Rock Tunnel B1F-W 1"]:connect_warp(R["Rock Tunnel 1F-NW 2"], "Rock Tunnel B1F-W 1 to Rock Tunnel 1F-NW 2", ER_INTERIOR)
 
 -- === Rock Tunnel B1F-W 2 ===
 R["Rock Tunnel B1F-W 2"]:connect_one_way(R["Rock Tunnel B1F-W"], "Rock Tunnel B1F-W 2 to Rock Tunnel B1F-W", rock_tunnel)
-R["Rock Tunnel B1F-W 2"]:connect_warp(R["Rock Tunnel 1F-S 2"], "Rock Tunnel B1F-W 2 to Rock Tunnel 1F-S 2", ER_ROCK_TUNNEL)
+R["Rock Tunnel B1F-W 2"]:connect_warp(R["Rock Tunnel 1F-S 2"], "Rock Tunnel B1F-W 2 to Rock Tunnel 1F-S 2", ER_INTERIOR)
 
 -- === Seafoam Islands B1F ===
 R["Seafoam Islands B1F"]:connect_one_way(R["Seafoam Islands B1F-Wild"], "Seafoam Islands B1F to Seafoam Islands B1F-Wild")

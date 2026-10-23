@@ -1409,5 +1409,108 @@
                 "inherit_codes": false
             }
         ]
+    },
+    {
+        "name": "Door Shuffle",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "stages": [
+            {
+                "name": "Door Shuffle: Off",
+                "img": "images/options/er.png",
+                "img_mods": "@disabled",
+                "codes": "er_doors, er_doors_off",
+                "inherit_codes": false
+            },
+            {
+                "name": "Door Shuffle: Simple",
+                "img": "images/options/er.png",
+                "codes": "er_doors, er_doors_simple",
+                "inherit_codes": false
+            },
+            {
+                "name": "Door Shuffle: Interiors",
+                "img": "images/options/er.png",
+                "codes": "er_doors, er_doors_interiors",
+                "inherit_codes": false
+            },
+            {
+                "name": "Door Shuffle: Full / Insanity",
+                "img": "images/options/er.png",
+                "codes": "er_doors, er_doors_full",
+                "inherit_codes": false
+            },
+            {
+                "name": "Door Shuffle: Decoupled",
+                "img": "images/options/er_decoupled.png",
+                "codes": "er_doors, er_doors_decoupled",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "Warp Tile Shuffle",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "stages": [
+            {
+                "name": "Warp Tiles: Vanilla",
+                "img": "images/events/sabrina.png",
+                "img_mods": "@disabled",
+                "codes": "er_warp_tiles, er_warp_tiles_off",
+                "inherit_codes": false
+            },
+            {
+                "name": "Warp Tiles: Randomized",
+                "img": "images/events/sabrina.png",
+                "codes": "er_warp_tiles, er_warp_tiles_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "Route Mode: Fly",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "stages": [
+            {
+                "name": "Route Mode: considers Fly",
+                "img": "images/items/hm02_fly.png",
+                "codes": "er_no_fly, er_no_fly_off",
+                "inherit_codes": false
+            },
+            {
+                "name": "Route Mode: does not consider Fly",
+                "img": "images/items/hm02_fly.png",
+                "img_mods": "@disabled",
+                "codes": "er_no_fly, er_no_fly_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "Visibility: Entrances",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "stages": [
+            {
+                "name": "Show Entrances",
+                "img": "images/entrances/entrance_unexplored.png",
+                "img_mods": "overlay|images/overlays/show.png",
+                "codes": "visibility_entrances, show_entrances",
+                "inherit_codes": false
+            },
+            {
+                "name": "Hide Entrances",
+                "img": "images/entrances/entrance_unexplored.png",
+                "img_mods": "overlay|images/overlays/hide.png,@disabled",
+                "codes": "visibility_entrances",
+                "inherit_codes": false
+            }
+        ]
     }
 ]

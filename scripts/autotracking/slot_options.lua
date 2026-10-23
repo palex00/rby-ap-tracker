@@ -40,10 +40,10 @@ IGNORED_CODES = {
     type_chart = "",
     v5_update = "",
     death_link = "",
-    warp_tile_shuffle = "",
     
     -- Special handling for these
     door_shuffle = "",
+    warp_tile_shuffle = "",
     old_man = "",
     elite_four_pokedex_condition = "",
     elite_four_key_items_condition = "",
@@ -164,5 +164,15 @@ function get_slot_options(slot_data)
 
 	if slot_data["door_shuffle"] and slot_data["door_shuffle"] > 0 then
 		Tracker:FindObjectForCode('automap').CurrentStage = 0
+	end
+
+	-- Full and Insanity shuffle the same doors
+	if slot_data["door_shuffle"] then
+		local stages = { [0] = 0, 1, 2, 3, 3, 4 }
+		Tracker:FindObjectForCode('er_doors').CurrentStage = stages[slot_data["door_shuffle"]]
+	end
+
+	if slot_data["warp_tile_shuffle"] then
+		Tracker:FindObjectForCode('er_warp_tiles').CurrentStage = slot_data["warp_tile_shuffle"] > 0 and 1 or 0
 	end
 end
