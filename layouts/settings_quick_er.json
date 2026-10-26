@@ -61,6 +61,12 @@
                         "item": "visibility_encounters",
                         "margin": "2,2",
                         "item_size": "32, 32"
+                    },
+                    {
+                        "type": "item",
+                        "item": "routing_tab",
+                        "margin": "2,2",
+                        "item_size": "32, 32"
                     }
                 ]
             }

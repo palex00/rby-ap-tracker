@@ -8,67 +8,12 @@
                     "orientation": "horizontal",
                     "content": [
                         {
-                            "type": "tabbed",
-                            "tabs": [
-                                {
-                                    "title": "Cities",
-                                    "content": {
-                                        "type": "layout",
-                                        "key": "submaps_cities"
-                                    }
-                                },
-                                {
-                                    "title": "Routes",
-                                    "content": {
-                                        "type": "layout",
-                                        "key": "submaps_routes"
-                                    }
-                                },
-                                {
-                                    "title": "Dungeons",
-                                    "content": {
-                                        "type": "layout",
-                                        "key": "submaps_dungeons"
-                                    }
-                                }
-                            ]
+                            "type": "layout",
+                            "key": "tabs_submaps"
                         },
                         {
-                            "type": "tabbed",
-                            "tabs": [
-                                {
-                                    "title": "Kanto",
-                                    "icon": "images/items/townmap.png",
-                                    "content": {
-                                        "type": "dock",
-                                        "content": {
-                                            "type": "map",
-                                            "maps": [
-                                                "map"
-                                            ]
-                                        }
-                                    }
-                                },
-                                {
-                                    "title": "Pokedex",
-                                    "icon": "images/items/pokedex.png",
-                                    "content": {
-                                        "type": "map",
-                                        "maps": [
-                                            "pokedex"
-                                        ]
-                                    }
-                                },
-                                {
-                                    "title": "Credits",
-                                    "content": {
-                                        "type": "map",
-                                        "maps": [
-                                            "credits"
-                                        ]
-                                    }
-                                }
-                            ]
+                            "type": "layout",
+                            "key": "tabs_meta"
                         }
                     ]
                 }

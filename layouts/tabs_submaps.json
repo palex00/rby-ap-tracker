@@ -1,0 +1,28 @@
+{
+    "tabs_submaps": {
+        "type": "tabbed",
+        "tabs": [
+            {
+                "title": "Cities",
+                "content": {
+                    "type": "layout",
+                    "key": "submaps_cities"
+                }
+            },
+            {
+                "title": "Routes",
+                "content": {
+                    "type": "layout",
+                    "key": "submaps_routes"
+                }
+            },
+            {
+                "title": "Dungeons",
+                "content": {
+                    "type": "layout",
+                    "key": "submaps_dungeons"
+                }
+            }
+        ]
+    }
+}

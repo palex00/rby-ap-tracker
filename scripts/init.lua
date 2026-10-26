@@ -43,6 +43,7 @@ Tracker:AddItems("items/options.json")
 Tracker:AddItems("items/dexsanity.json")
 Tracker:AddItems("items/trainersanity.json")
 Tracker:AddItems("items/events.json")
+Tracker:AddItems("items/route.json")
 
 -- Maps
 Tracker:AddMaps("maps/maps.json")
@@ -67,6 +68,9 @@ Tracker:AddLayouts("layouts/tracker.json")
 Tracker:AddLayouts("layouts/settings.json")
 Tracker:AddLayouts("layouts/settings_quick.json")
 Tracker:AddLayouts("layouts/submaps.json")
+Tracker:AddLayouts("layouts/routing.json")
+Tracker:AddLayouts("layouts/tabs_meta.json")
+Tracker:AddLayouts("layouts/tabs_submaps.json")
 Tracker:AddLayouts("layouts/tabs_single.json")
 Tracker:AddLayouts("layouts/broadcast.json")
 
@@ -91,6 +95,10 @@ ScriptHost:AddWatchForCode("visibility_encounters", "visibility_encounters", tog
 ScriptHost:AddWatchForCode("er_doors", "er_doors", RefreshERSettings)
 ScriptHost:AddWatchForCode("er_doors_layout", "er_doors", toggle_quick_settings)
 ScriptHost:AddWatchForCode("er_warp_tiles", "er_warp_tiles", RefreshERSettings)
+ScriptHost:AddWatchForCode("er_doors_tabs", "er_doors", toggle_splitmap)
+ScriptHost:AddWatchForCode("er_warp_tiles_tabs", "er_warp_tiles", toggle_splitmap)
+ScriptHost:AddWatchForCode("er_warp_tiles_layout", "er_warp_tiles", toggle_quick_settings)
+ScriptHost:AddWatchForCode("routing_tab", "routing_tab", toggle_splitmap)
 RefreshERSettings()
 
 initialize_watch_items()

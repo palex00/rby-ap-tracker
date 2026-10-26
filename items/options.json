@@ -1492,6 +1492,26 @@
         ]
     },
     {
+        "name": "Routing Tab",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "stages": [
+            {
+                "name": "Routing Tab - With Kanto & Pokedex",
+                "img": "images/options/routing_over.png",
+                "codes": "routing_tab, routing_tab_meta",
+                "inherit_codes": false
+            },
+            {
+                "name": "Routing Tab - With Submaps",
+                "img": "images/options/routing_sub.png",
+                "codes": "routing_tab, routing_tab_submap",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
         "name": "Visibility: Entrances",
         "type": "progressive",
         "loop": true,
