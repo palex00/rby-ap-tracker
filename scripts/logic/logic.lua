@@ -45,71 +45,38 @@ end
 --a table for lookups
 badges = {"boulder", "cascade", "thunder", "rainbow", "soul", "marsh", "volcano", "earth"}
 
-function cut()
-    obj = Tracker:FindObjectForCode('cut')
-    stage = 0
-    extra = AccessibilityLevel.None
+local function hm(code, badge)
+    local obj = Tracker:FindObjectForCode(code)
+    local extra = AccessibilityLevel.None
     if obj then
-        stage = obj.CurrentStage
-        if stage > 0 then
+        local stage = obj.CurrentStage
+        if stage > #badges then
+            extra = AccessibilityLevel.Normal
+        elseif stage > 0 then
             extra = has(badges[stage])
         end
     end
-    return access(has('cut'),max(has('cascade'),has('opt_hm_off'),extra))
+    return access(has(code), max(has(badge), has('opt_hm_off'), extra))
+end
+
+function cut()
+    return hm('cut', 'cascade')
 end
 
 function fly()
-    obj = Tracker:FindObjectForCode('fly')
-    stage = 0
-    extra = AccessibilityLevel.None
-    if obj then
-        stage = obj.CurrentStage
-        if stage > 0 then
-            extra = has(badges[stage])
-        end
-    end
-
-    return access(has('fly'), max(has('thunder'),has('opt_hm_off'),extra))
+    return hm('fly', 'thunder')
 end
 
 function surf()
-    obj = Tracker:FindObjectForCode('surf')
-    stage = 0
-    extra = AccessibilityLevel.None
-    if obj then
-        stage = obj.CurrentStage
-        if stage > 0 then
-            extra = has(badges[stage])
-        end
-    end
-    return access(has('surf'), max(has('soul'),has('opt_hm_off'),extra))
+    return hm('surf', 'soul')
 end
 
 function strength()
-    obj = Tracker:FindObjectForCode('strength')
-    stage = 0
-    extra = AccessibilityLevel.None
-    if obj then
-        stage = obj.CurrentStage
-        if stage > 0 then
-            extra = has(badges[stage])
-        end
-    end
-
-    return access(has('strength'), max(has('rainbow'),has('opt_hm_off'),extra))
+    return hm('strength', 'rainbow')
 end
 
 function flash()
-    obj = Tracker:FindObjectForCode('flash')
-    stage = 0
-    extra = AccessibilityLevel.None
-    if obj then
-        stage = obj.CurrentStage
-        if stage > 0 then
-            extra = has(badges[stage])
-        end
-    end
-    return access(has('flash'), max(has('boulder'),has('opt_hm_off'),extra))
+    return hm('flash', 'boulder')
 end
 
 function flyto(location)
