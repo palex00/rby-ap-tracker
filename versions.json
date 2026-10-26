@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "package_version": "3.2.1",
+      "download_url": "https://github.com/palex00/rby-ap-tracker/archive/refs/tags/3.2.1.zip",
+      "sha256": "f42ff54030f10720b56021a8efed13427903b4cdd690f1032e6ee3dc267ef0ca",
+      "changelog": [
+        "Check release notes"
+      ]
+    },
+    {
       "package_version": "3.2.0",
       "download_url": "https://github.com/palex00/rby-ap-tracker/archive/refs/tags/3.2.0.zip",
       "sha256": "f63f1c1af2d8f93cb33b9b96c6ff10b0fdc9ad6b22fed2b9f0f7b176357eb3e2",
