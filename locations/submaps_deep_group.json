@@ -13,6 +13,7 @@
 {"name": "Oak", "sections": [{"name": "Give Oak his Parcel (Event)", "ref": "Kanto/Pallet Town/Give Oak his Parcel (Event)"}, {"name": "Oak's Parcel Reward", "ref": "Kanto/Pallet Town/Oak's Parcel Reward"}, {"name": "Oak's Post-Route-22-Rival Gift", "ref": "Kanto/Pallet Town/Oak's Post-Route-22-Rival Gift"}], "map_locations": [{"map": "oakslab", "x": 88, "y": 40}]},
 {"name": "Thirsty Girl", "sections": [{"name": "Rooftop Thirsty Girl Water", "ref": "Kanto/Celadon City/Rooftop Thirsty Girl Water"}, {"name": "Rooftop Thirsty Girl Soda Pop", "ref": "Kanto/Celadon City/Rooftop Thirsty Girl Soda Pop"}, {"name": "Rooftop Thirsty Girl Lemonade", "ref": "Kanto/Celadon City/Rooftop Thirsty Girl Lemonade"}], "map_locations": [{"map": "celadonmartroof", "x": 88, "y": 88}]},
 {"name": "Bill", "sections": [{"name": "Bill", "ref": "Kanto/Route 25/Bill"}, {"name": "Help Bill (Event)", "ref": "Kanto/Route 25/Help Bill (Event)"}], "map_locations": [{"map": "billshouse", "x": 72, "y": 72}]},
+{"name": "Prize Corner", "sections": [{"name": "Prize Corner 1", "ref": "Kanto/Celadon City/Prize Corner 1"}, {"name": "Prize Corner 2", "ref": "Kanto/Celadon City/Prize Corner 2"}, {"name": "Prize Corner 3", "ref": "Kanto/Celadon City/Prize Corner 3"}], "map_locations": [{"map": "gamecornerprizeroom", "x": 104, "y": 40}]},
 {"name": "Lab Fossils", "sections": [{"name": "Fossil A", "ref": "Kanto/Fossil/Fossil A"}, {"name": "Fossil B", "ref": "Kanto/Fossil/Fossil B"}], "map_locations": [{"map": "cinnabarlabfossilroom", "x": 88, "y": 40}]}
         ]
     }

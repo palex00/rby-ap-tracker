@@ -11,10 +11,24 @@
                             "type": "tabbed",
                             "tabs": [
                                 {
-                                    "title": "Submaps",
+                                    "title": "Cities",
                                     "content": {
                                         "type": "layout",
-                                        "key": "submaps"
+                                        "key": "submaps_cities"
+                                    }
+                                },
+                                {
+                                    "title": "Routes",
+                                    "content": {
+                                        "type": "layout",
+                                        "key": "submaps_routes"
+                                    }
+                                },
+                                {
+                                    "title": "Dungeons",
+                                    "content": {
+                                        "type": "layout",
+                                        "key": "submaps_dungeons"
                                     }
                                 }
                             ]
@@ -33,16 +47,6 @@
                                                 "map"
                                             ]
                                         }
-                                    }
-                                },
-                                {
-                                    "title": "Encounters",
-                                    "icon": "images/items/encounter_icon.png",
-                                    "content": {
-                                        "type": "map",
-                                        "maps": [
-                                            "encounters"
-                                        ]
                                     }
                                 },
                                 {

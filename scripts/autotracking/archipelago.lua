@@ -17,7 +17,9 @@ function onClear(slot_data)
     CUR_INDEX = -1
     PLAYER_ID = Archipelago.PlayerNumber or -1
     TEAM_NUMBER = Archipelago.TeamNumber or 0
-    ER_STATE:adoptSeed(Archipelago.Seed .. "_" .. TEAM_NUMBER .. "_" .. PLAYER_ID)
+    if ER_STATE:adoptSeed(Archipelago.Seed .. "_" .. TEAM_NUMBER .. "_" .. PLAYER_ID) then
+        ClearEncounterMarks()
+    end
     
     -- reset locations
     for _, v in pairs(LOCATION_MAPPING) do

@@ -1512,5 +1512,28 @@
                 "inherit_codes": false
             }
         ]
+    },
+    {
+        "name": "Visibility: Encounters",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "initial_stage_idx": 1,
+        "stages": [
+            {
+                "name": "Show Encounters",
+                "img": "images/items/encounter_icon.png",
+                "img_mods": "overlay|images/overlays/show.png",
+                "codes": "visibility_encounters, show_encounters",
+                "inherit_codes": false
+            },
+            {
+                "name": "Hide Encounters",
+                "img": "images/items/encounter_icon.png",
+                "img_mods": "overlay|images/overlays/hide.png",
+                "codes": "visibility_encounters",
+                "inherit_codes": false
+            }
+        ]
     }
 ]

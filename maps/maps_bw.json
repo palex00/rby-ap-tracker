@@ -1,6 +1,5 @@
 [
 {"name": "map", "location_size": 16, "location_border_thickness": 2, "img": "images/maps/mono/map.png"},
-{"name": "encounters", "location_size": 16, "location_border_thickness": 2, "img": "images/maps/mono/map_encounter.png"},
 {"name": "pokedex", "location_size": 12, "location_border_thickness": 2, "img": "images/maps/mono/pokedex.png"},
 {"name": "agathasroom", "location_size": 12, "location_border_thickness": 1, "img": "images/maps/mono/AgathasRoom.png"},
 {"name": "bikeshop", "location_size": 12, "location_border_thickness": 1, "img": "images/maps/mono/BikeShop.png"},

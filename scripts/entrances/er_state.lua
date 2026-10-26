@@ -106,13 +106,15 @@ function ErState:setPending(item)
     self:touch()
 end
 
--- links made before the first connect are kept
+-- links made before the first connect are kept; returns true for a different seed
 function ErState:adoptSeed(stamp)
-    if self.stamp ~= nil and self.stamp ~= stamp then
+    local changed = self.stamp ~= nil and self.stamp ~= stamp
+    if changed then
         self:setPending(nil)
         ErClearAll()
     end
     self.stamp = stamp
+    return changed
 end
 
 function ErState:save()

@@ -1,26 +1,44 @@
 {
     "quick_settings_grid": {
         "type": "array",
-        "orientation": "vertical",
+        "orientation": "horizontal",
         "margin": "2,2",
         "content": [
             {
-                "type": "item",
-                "item": "automap",
-                "margin": "2,2",
-                "item_size": "32, 32"
+                "type": "array",
+                "orientation": "vertical",
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "automap",
+                        "margin": "2,2",
+                        "item_size": "32, 32"
+                    },
+                    {
+                        "type": "item",
+                        "item": "splitmap",
+                        "margin": "2,2",
+                        "item_size": "32, 32"
+                    },
+                    {
+                        "type": "item",
+                        "item": "colormap",
+                        "margin": "2,2",
+                        "item_size": "32, 32"
+                    }
+                ]
             },
             {
-                "type": "item",
-                "item": "splitmap",
-                "margin": "2,2",
-                "item_size": "32, 32"
-            },
-            {
-                "type": "item",
-                "item": "colormap",
-                "margin": "2,2",
-                "item_size": "32, 32"
+                "type": "array",
+                "orientation": "vertical",
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "visibility_encounters",
+                        "margin": "2,2",
+                        "item_size": "32, 32"
+                    }
+                ]
             }
         ]
     }

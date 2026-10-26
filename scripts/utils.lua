@@ -309,6 +309,14 @@ function toggle_grayscale()
     else
         print("Oh Oh.")
     end
+    toggle_encounter_map()
+end
+
+-- the overworld shows the encounter map image while encounters are shown
+function toggle_encounter_map()
+    local bw = Tracker:FindObjectForCode("colormap").CurrentStage == 1
+    local shown = Tracker:ProviderCountForCode("show_encounters") > 0
+    Tracker:AddMaps("maps/overworld" .. (bw and "_bw" or "") .. (shown and "_encounters" or "") .. ".json")
 end
 
 function toggle_boulders()
