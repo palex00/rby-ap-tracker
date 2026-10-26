@@ -98,10 +98,10 @@ function ErState:setPending(item)
     end
     self.pending = item
     if old then
-        old:setGlow(Highlight.None)
+        old:refreshGlow()
     end
     if item then
-        item:setGlow(Highlight.NoPriority)
+        item:refreshGlow()
     end
     self:touch()
 end
@@ -143,6 +143,7 @@ end
 function ErClickEntrance(item)
     local pending = ER_STATE.pending
     if pending == nil then
+        StopRouting()
         ER_STATE:setPending(item)
     elseif pending == item then
         ER_STATE:setPending(nil)

@@ -100,8 +100,17 @@ function EntranceItem:isLinked()
     return ER_LINKS[self.token] ~= nil
 end
 
+local NAV_TARGET = nil
+
+-- middle-click target, then pending link, then route blink
 -- highlights only draw on sections that aren't done, so a glowing entrance reports as unlinked
-function EntranceItem:setGlow(highlight)
+function EntranceItem:refreshGlow()
+    local highlight = self.routeGlow or Highlight.None
+    if NAV_TARGET == self then
+        highlight = Highlight.Avoid
+    elseif ER_STATE.pending == self then
+        highlight = Highlight.NoPriority
+    end
     Tracker:FindObjectForCode(self.row.section).Highlight = highlight
     self:setProperty("glow", highlight ~= Highlight.None)
 end
@@ -123,21 +132,22 @@ end
 
 -- same entrance twice routes from Pallet Town
 ROUTE_START_ITEM = nil
+local PALLET_TAB = {"Cities", "Pallet Town", "Town"}
 
 function EntranceItem:onRightClick()
     if ROUTE_START_ITEM == nil then
+        StopRouting()
         ROUTE_START_ITEM = self
         return
     end
     if ROUTE_START_ITEM == self then
-        GetRoute(NAMED_NODES["Pallet Town"], NAMED_NODES[self.node])
+        GetRoute(NAMED_NODES["Pallet Town"], NAMED_NODES[self.node], PALLET_TAB)
     else
-        GetRoute(NAMED_NODES[ROUTE_START_ITEM.node], NAMED_NODES[self.node])
+        GetRoute(NAMED_NODES[ROUTE_START_ITEM.node], NAMED_NODES[self.node], ROUTE_START_ITEM.row.tab)
     end
     ROUTE_START_ITEM = nil
 end
 
-local NAV_TARGET = nil
 local NAV_TIME = 0
 local NAV_SECONDS = 5
 
@@ -146,10 +156,11 @@ function RemoveEntranceHighlight()
         return
     end
     ScriptHost:RemoveOnFrameHandler("entrance highlight handler")
-    if NAV_TARGET then
-        NAV_TARGET:setGlow(NAV_TARGET == ER_STATE.pending and Highlight.NoPriority or Highlight.None)
-    end
+    local old = NAV_TARGET
     NAV_TARGET = nil
+    if old then
+        old:refreshGlow()
+    end
 end
 
 function EntranceItem:onMiddleClick()
@@ -165,11 +176,12 @@ function EntranceItem:onMiddleClick()
     if not target then
         return
     end
-    if NAV_TARGET and NAV_TARGET ~= target then
-        NAV_TARGET:setGlow(NAV_TARGET == ER_STATE.pending and Highlight.NoPriority or Highlight.None)
-    end
+    local old = NAV_TARGET
     NAV_TARGET = target
-    NAV_TARGET:setGlow(Highlight.Avoid)
+    if old and old ~= target then
+        old:refreshGlow()
+    end
+    target:refreshGlow()
     NAV_TIME = os.time()
     ScriptHost:AddOnFrameHandler("entrance highlight handler", RemoveEntranceHighlight)
 end
