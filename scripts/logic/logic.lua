@@ -38,8 +38,6 @@ end
 --a table for lookups
 badges = {"boulder", "cascade", "thunder", "rainbow", "soul", "marsh", "volcano", "earth"}
 
--- An HM is usable with its vanilla badge, with no badges needed at all (opt_hm_off), or with
--- the extra badge its item stage names: stage 0 none, 1-8 the badges above, 9 no requirement.
 local function hm(code, badge)
     local obj = Tracker:FindObjectForCode(code)
     local extra = AccessibilityLevel.None
