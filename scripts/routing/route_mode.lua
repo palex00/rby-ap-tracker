@@ -84,14 +84,40 @@ local function findPath(start, finish)
         return nil
     end
     local hops = {}
+    local path = { finish }
     local node = finish
     while prev[node] do
         if prev[node].label ~= "" then
             table.insert(hops, 1, prev[node])
         end
         node = prev[node].node
+        table.insert(path, 1, node)
     end
-    return hops
+    return hops, path
+end
+
+local function mapOf(node)
+    return MAP_IDS[node.name:match("^[^-]*")]
+end
+
+-- the client only reports map changes, so a route that passes through the finish map ends on its last entry
+local ARRIVAL_MAP = nil
+local ARRIVALS_LEFT = 0
+
+local function countArrivals(path)
+    local finish_map = mapOf(path[#path])
+    local map = mapOf(path[1])
+    local count = 0
+    for i = 2, #path do
+        local next_map = mapOf(path[i])
+        if next_map and next_map ~= map then
+            map = next_map
+            if map == finish_map then
+                count = count + 1
+            end
+        end
+    end
+    return finish_map, count
 end
 
 local function writeRouteTile(index, text)
@@ -167,6 +193,27 @@ function StopRouting()
     end
     clearRouteTiles()
     ROUTE_ABORT_ITEM:show(false)
+    ARRIVAL_MAP = nil
+end
+
+function RouteMapEntered(map)
+    if ARRIVAL_MAP == nil or map ~= ARRIVAL_MAP then
+        return
+    end
+    ARRIVALS_LEFT = ARRIVALS_LEFT - 1
+    if ARRIVALS_LEFT > 0 then
+        return
+    end
+    StopRouting()
+    -- leave the Routing tab for whatever shares its widget
+    local split = Tracker:FindObjectForCode("splitmap").CurrentStage ~= 0
+    if split and Tracker:ProviderCountForCode("routing_tab_submap") > 0 then
+        for _, tab in ipairs(MAP_MAPPING_ALL[map] or {}) do
+            Tracker:UiHint("ActivateTab", tab)
+        end
+    else
+        Tracker:UiHint("ActivateTab", "Kanto")
+    end
 end
 
 local function routeBlinkFrame(elapsed)
@@ -209,7 +256,13 @@ function GetRoute(start, finish, start_tab)
     end
     StopRouting()
     CanReach("Entry_point")
-    local hops = findPath(start, finish)
+    local hops, path = findPath(start, finish)
+    if hops ~= nil and start ~= finish then
+        ARRIVAL_MAP, ARRIVALS_LEFT = countArrivals(path)
+        if ARRIVALS_LEFT == 0 then
+            ARRIVAL_MAP = nil
+        end
+    end
     if hops == nil then
         writeRouteTile(0, "No Route Found")
     elseif start == finish then

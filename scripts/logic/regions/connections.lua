@@ -69,9 +69,8 @@ local function surf_or_cut() return ANY(surf, cut) end
 local function surf_strength_seafoam_boulders() return ALL(surf, strength, seafoam_exit_boulders) end
 local function tower_ghost() return ANY(has("silphscope"), ALL(has("opt_pokedoll_skip_on"), reach("Celadon Department Store 4F"))) end
 
--- The game starts in Pallet Town. Structural edge: no token, never routed.
--- The apworld's Menu origin and its Pokedex / Evolution / Fossil Level side regions are left
--- out: no tracker location binds to them.
+-- you start in 2F, and the house exit always leads to Pallet Town
+Entry_point:connect_one_way(R["Player's House 2F"])
 Entry_point:connect_one_way(R["Pallet Town"])
 
 -- Fly: the apworld only adds a Menu -> town edge for this seed's free fly and Town Map fly

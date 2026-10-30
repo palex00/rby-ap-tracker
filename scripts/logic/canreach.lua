@@ -217,7 +217,7 @@ function Node:discover(accessibility)
 end
 
 -- Root of the graph and the dead-end sink for unlinked warps.
--- connections.lua connects Entry_point to Pallet Town and to the fly destinations.
+-- connections.lua hooks up the starting regions and fly spots.
 Entry_point = Node.new("Entry_point")
 Empty_node = Node.new("Empty_node")
 
