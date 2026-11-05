@@ -1418,26 +1418,29 @@
         "stages": [
             {
                 "name": "Door Shuffle: Off",
-                "img": "images/options/er.png",
-                "img_mods": "@disabled",
+                "img": "images/entrances/entrance_unexplored.png",
+                "img_mods": "@disabled, overlay|images/entrances/overlay_off.png",
                 "codes": "er_doors, er_doors_off",
                 "inherit_codes": false
             },
             {
                 "name": "Door Shuffle: Simple",
-                "img": "images/options/er.png",
+                "img": "images/entrances/entrance_unexplored.png",
+                "img_mods": "overlay|images/entrances/overlay_simple.png",
                 "codes": "er_doors, er_doors_simple",
                 "inherit_codes": false
             },
             {
                 "name": "Door Shuffle: Interiors",
-                "img": "images/options/er.png",
+                "img": "images/entrances/entrance_unexplored.png",
+                "img_mods": "overlay|images/entrances/overlay_interiors.png",
                 "codes": "er_doors, er_doors_interiors",
                 "inherit_codes": false
             },
             {
                 "name": "Door Shuffle: Full / Insanity",
-                "img": "images/options/er.png",
+                "img": "images/entrances/entrance_unexplored.png",
+                "img_mods": "overlay|images/entrances/overlay_insanity.png",
                 "codes": "er_doors, er_doors_full",
                 "inherit_codes": false
             },
@@ -1457,14 +1460,14 @@
         "stages": [
             {
                 "name": "Warp Tiles: Vanilla",
-                "img": "images/events/sabrina.png",
+                "img": "images/entrances/warptiles.png",
                 "img_mods": "@disabled",
                 "codes": "er_warp_tiles, er_warp_tiles_off",
                 "inherit_codes": false
             },
             {
                 "name": "Warp Tiles: Randomized",
-                "img": "images/events/sabrina.png",
+                "img": "images/entrances/warptiles.png",
                 "codes": "er_warp_tiles, er_warp_tiles_on",
                 "inherit_codes": false
             }
@@ -1542,14 +1545,14 @@
         "stages": [
             {
                 "name": "Show Encounters",
-                "img": "images/items/encounter_icon.png",
+                "img": "images/options/encounter_icon.png",
                 "img_mods": "overlay|images/overlays/show.png",
                 "codes": "visibility_encounters, show_encounters",
                 "inherit_codes": false
             },
             {
                 "name": "Hide Encounters",
-                "img": "images/items/encounter_icon.png",
+                "img": "images/options/encounter_icon.png",
                 "img_mods": "overlay|images/overlays/hide.png",
                 "codes": "visibility_encounters",
                 "inherit_codes": false

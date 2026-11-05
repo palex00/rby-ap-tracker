@@ -175,7 +175,7 @@ ErClearButton = CustomItem:extend()
 
 function ErClearButton:init()
     self:createItem("Clear ER connections (click twice)", {"er_clear_all"})
-    self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/options/er.png")
+    self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/entrances/full_reset.png")
     self.ItemInstance.IconMods = "@disabled"
     self.ItemInstance.BadgeTextColor = "#ff4040"
     self.armedAt = nil
@@ -225,10 +225,10 @@ function RefreshERSettings()
 end
 
 ER_STATE = ErState()
-ER_ABORT_ITEM = ErAction("Abort ER Linking", "er_abort", "images/options/er.png", function()
+ER_ABORT_ITEM = ErAction("Abort ER Linking", "er_abort", "images/entrances/abort_linking.png", function()
     ER_STATE:setPending(nil)
 end)
-ER_CLEAR_LINK_ITEM = ErAction("Clear this mapping", "er_clear_link", "images/entrances/entrance_unexplored.png", function()
+ER_CLEAR_LINK_ITEM = ErAction("Clear this mapping", "er_clear_link", "images/entrances/abort_linking.png", function()
     local pending = ER_STATE.pending
     if pending then
         ER_STATE:setPending(nil)
