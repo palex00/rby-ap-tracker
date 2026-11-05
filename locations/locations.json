@@ -255,7 +255,7 @@
                     },
                     {
                         "name": "Beat Lt. Surge (Event)",
-                        "hosted_item": "EVENT_BEAT_LT_SURGE",
+                        "hosted_item": "EVENT_BEAT_LT_SURGE_hosted",
                         "access_rules": [
                             "^$CanReach|Vermilion Gym"
                         ],
@@ -265,7 +265,6 @@
                     },
                     {
                         "name": "Lt. Surge",
-                        "hosted_item": "surge_beaten",
                         "chest_unopened_img": "images/trainers/ltsurge.png",
                         "chest_opened_img": "images/trainers/ltsurge_done.png",
                         "item_count": 2,
@@ -278,7 +277,6 @@
                     },
                     {
                         "name": "​Lt. Surge",
-                        "hosted_item": "surge_beaten",
                         "chest_unopened_img": "images/trainers/ltsurge.png",
                         "chest_opened_img": "images/trainers/ltsurge_done.png",
                         "item_count": 1,
@@ -590,7 +588,7 @@
                     },
                     {
                         "name": "Beat Koga (Event)",
-                        "hosted_item": "EVENT_BEAT_KOGA",
+                        "hosted_item": "EVENT_BEAT_KOGA_hosted",
                         "access_rules": [
                             "^$CanReach|Fuchsia Gym"
                         ],
@@ -600,7 +598,6 @@
                     },
                     {
                         "name": "Koga",
-                        "hosted_item": "koga_beaten",
                         "chest_unopened_img": "images/trainers/koga.png",
                         "chest_opened_img": "images/trainers/koga_done.png",
                         "item_count": 2,
@@ -613,7 +610,6 @@
                     },
                     {
                         "name": "​Koga",
-                        "hosted_item": "koga_beaten",
                         "chest_unopened_img": "images/trainers/koga.png",
                         "chest_opened_img": "images/trainers/koga_done.png",
                         "item_count": 1,
@@ -863,7 +859,7 @@
                     },
                     {
                         "name": "Give Oak his Parcel (Event)",
-                        "hosted_item": "EVENT_OAK_GOT_PARCEL",
+                        "hosted_item": "EVENT_OAK_GOT_PARCEL_hosted",
                         "access_rules": [
                             "^$CanReach|Oak's Lab, parcel"
                         ],
@@ -1498,7 +1494,7 @@
                         "visibility_rules": [
                             "opt_stonesanity_off"
                         ],
-                        "hosted_item": "leafstone, thunderstone, waterstone, firestone",
+                        "hosted_item": "leafstone_hosted, thunderstone_hosted, waterstone_hosted, firestone_hosted",
                         "access_rules": [
                             "^$CanReach|Celadon Department Store 4F"
                         ]
@@ -1751,7 +1747,7 @@
                     },
                     {
                         "name": "Beat Erika (Event)",
-                        "hosted_item": "EVENT_BEAT_ERIKA",
+                        "hosted_item": "EVENT_BEAT_ERIKA_hosted",
                         "access_rules": [
                             "^$CanReach|Celadon Gym-C"
                         ],
@@ -1761,7 +1757,6 @@
                     },
                     {
                         "name": "Erika",
-                        "hosted_item": "erika_beaten",
                         "chest_unopened_img": "images/trainers/erika.png",
                         "chest_opened_img": "images/trainers/erika_done.png",
                         "item_count": 2,
@@ -1774,7 +1769,6 @@
                     },
                     {
                         "name": "​Erika",
-                        "hosted_item": "erika_beaten",
                         "chest_unopened_img": "images/trainers/erika.png",
                         "chest_opened_img": "images/trainers/erika_done.png",
                         "item_count": 1,
@@ -2146,7 +2140,7 @@
                     },
                     {
                         "name": "Beat Giovanni (Event)",
-                        "hosted_item": "EVENT_BEAT_VIRIDIAN_GYM_GIOVANNI",
+                        "hosted_item": "EVENT_BEAT_VIRIDIAN_GYM_GIOVANNI_hosted",
                         "access_rules": [
                             "^$CanReach|Viridian Gym"
                         ],
@@ -2156,7 +2150,6 @@
                     },
                     {
                         "name": "Giovanni",
-                        "hosted_item": "giovanni_beaten",
                         "chest_unopened_img": "images/trainers/giovanni.png",
                         "chest_opened_img": "images/trainers/giovanni_done.png",
                         "item_count": 2,
@@ -2169,7 +2162,6 @@
                     },
                     {
                         "name": "​Giovanni",
-                        "hosted_item": "giovanni_beaten",
                         "chest_unopened_img": "images/trainers/giovanni.png",
                         "chest_opened_img": "images/trainers/giovanni_done.png",
                         "item_count": 1,
@@ -2577,7 +2569,7 @@
                     },
                     {
                         "name": "Beat Brock (Event)",
-                        "hosted_item": "EVENT_BEAT_BROCK",
+                        "hosted_item": "EVENT_BEAT_BROCK_hosted",
                         "access_rules": [
                             "^$CanReach|Pewter Gym"
                         ],
@@ -2587,7 +2579,6 @@
                     },
                     {
                         "name": "Brock",
-                        "hosted_item": "brock_beaten",
                         "chest_unopened_img": "images/trainers/brock.png",
                         "chest_opened_img": "images/trainers/brock_done.png",
                         "item_count": 2,
@@ -2600,7 +2591,6 @@
                     },
                     {
                         "name": "​Brock",
-                        "hosted_item": "brock_beaten",
                         "chest_unopened_img": "images/trainers/brock.png",
                         "chest_opened_img": "images/trainers/brock_done.png",
                         "item_count": 1,
@@ -2880,7 +2870,7 @@
                     },
                     {
                         "name": "Beat Misty (Event)",
-                        "hosted_item": "EVENT_BEAT_MISTY",
+                        "hosted_item": "EVENT_BEAT_MISTY_hosted",
                         "access_rules": [
                             "^$CanReach|Cerulean Gym"
                         ],
@@ -2890,7 +2880,6 @@
                     },
                     {
                         "name": "Misty",
-                        "hosted_item": "misty_beaten",
                         "chest_unopened_img": "images/trainers/misty.png",
                         "chest_opened_img": "images/trainers/misty_done.png",
                         "item_count": 2,
@@ -2903,7 +2892,6 @@
                     },
                     {
                         "name": "​Misty",
-                        "hosted_item": "misty_beaten",
                         "chest_unopened_img": "images/trainers/misty.png",
                         "chest_opened_img": "images/trainers/misty_done.png",
                         "item_count": 1,
@@ -3371,7 +3359,7 @@
                     },
                     {
                         "name": "Help Bill (Event)",
-                        "hosted_item": "EVENT_GOT_SS_TICKET",
+                        "hosted_item": "EVENT_GOT_SS_TICKET_hosted",
                         "access_rules": [
                             "^$CanReach|Bill's House"
                         ],
@@ -4705,7 +4693,7 @@
                         "access_rules": [
                             "^$CanReach|Silph Co 11F-C"
                         ],
-                        "hosted_item": "EVENT_BEAT_SILPH_CO_GIOVANNI",
+                        "hosted_item": "EVENT_BEAT_SILPH_CO_GIOVANNI_hosted",
                         "visibility_rules": [
                             ""
                         ]
@@ -6849,7 +6837,7 @@
                     },
                     {
                         "name": "Beat Blaine (Event)",
-                        "hosted_item": "EVENT_BEAT_BLAINE",
+                        "hosted_item": "EVENT_BEAT_BLAINE_hosted",
                         "access_rules": [
                             "^$CanReach|Cinnabar Gym"
                         ],
@@ -6859,7 +6847,6 @@
                     },
                     {
                         "name": "Blaine",
-                        "hosted_item": "blaine_beaten",
                         "chest_unopened_img": "images/trainers/blaine.png",
                         "chest_opened_img": "images/trainers/blaine_done.png",
                         "item_count": 2,
@@ -6872,7 +6859,6 @@
                     },
                     {
                         "name": "​Blaine",
-                        "hosted_item": "blaine_beaten",
                         "chest_unopened_img": "images/trainers/blaine.png",
                         "chest_opened_img": "images/trainers/blaine_done.png",
                         "item_count": 1,
@@ -7667,7 +7653,7 @@
                     },
                     {
                         "name": "Beat Sabrina (Event)",
-                        "hosted_item": "EVENT_BEAT_SABRINA",
+                        "hosted_item": "EVENT_BEAT_SABRINA_hosted",
                         "access_rules": [
                             "^$CanReach|Saffron Gym-C"
                         ],
@@ -7677,7 +7663,6 @@
                     },
                     {
                         "name": "Sabrina",
-                        "hosted_item": "sabrina_beaten",
                         "chest_unopened_img": "images/trainers/sabrina.png",
                         "chest_opened_img": "images/trainers/sabrina_done.png",
                         "item_count": 2,
@@ -7690,7 +7675,6 @@
                     },
                     {
                         "name": "​Sabrina",
-                        "hosted_item": "sabrina_beaten",
                         "chest_unopened_img": "images/trainers/sabrina.png",
                         "chest_opened_img": "images/trainers/sabrina_done.png",
                         "item_count": 1,
@@ -9088,7 +9072,7 @@
                     },
                     {
                         "name": "7F Save Mr. Fuji (Event)",
-                        "hosted_item": "EVENT_RESCUED_MR_FUJI",
+                        "hosted_item": "EVENT_RESCUED_MR_FUJI_hosted",
                         "access_rules": [
                             "^$CanReach|Pokemon Tower 7F"
                         ],
@@ -16518,7 +16502,7 @@
                         "access_rules": [
                             "^$CanReach|Indigo Plateau Champion's Room"
                         ],
-                        "hosted_item": "EVENT_BEAT_CHAMPION_RIVAL",
+                        "hosted_item": "EVENT_BEAT_CHAMPION_RIVAL_hosted",
                         "visibility_rules": [
                             ""
                         ]
@@ -16818,7 +16802,7 @@
                         "access_rules": [
                             "^$CanReach|Route 22, EVENT_OAK_GOT_PARCEL"
                         ],
-                        "hosted_item": "EVENT_BEAT_ROUTE22_RIVAL_1ST_BATTLE",
+                        "hosted_item": "EVENT_BEAT_ROUTE22_RIVAL_1ST_BATTLE_hosted",
                         "visibility_rules": [
                             ""
                         ]

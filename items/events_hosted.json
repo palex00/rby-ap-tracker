@@ -1,0 +1,114 @@
+[
+    {
+        "name": "Beat Brock (Event)",
+        "type": "toggle",
+        "img": "images/events/brock.png",
+        "img_mods": "@disabled",
+        "disabled_img_mods": "none",
+        "codes": "EVENT_BEAT_BROCK_hosted"
+    },
+    {
+        "name": "Beat Misty (Event)",
+        "type": "toggle",
+        "img": "images/events/misty.png",
+        "img_mods": "@disabled",
+        "disabled_img_mods": "none",
+        "codes": "EVENT_BEAT_MISTY_hosted"
+    },
+    {
+        "name": "Beat Lt. Surge (Event)",
+        "type": "toggle",
+        "img": "images/events/lt_surge.png",
+        "img_mods": "@disabled",
+        "disabled_img_mods": "none",
+        "codes": "EVENT_BEAT_LT_SURGE_hosted"
+    },
+    {
+        "name": "Beat Erika (Event)",
+        "type": "toggle",
+        "img": "images/events/erika.png",
+        "img_mods": "@disabled",
+        "disabled_img_mods": "none",
+        "codes": "EVENT_BEAT_ERIKA_hosted"
+    },
+    {
+        "name": "Beat Koga (Event)",
+        "type": "toggle",
+        "img": "images/events/koga.png",
+        "img_mods": "@disabled",
+        "disabled_img_mods": "none",
+        "codes": "EVENT_BEAT_KOGA_hosted"
+    },
+    {
+        "name": "Beat Sabrina (Event)",
+        "type": "toggle",
+        "img": "images/events/sabrina.png",
+        "img_mods": "@disabled",
+        "disabled_img_mods": "none",
+        "codes": "EVENT_BEAT_SABRINA_hosted"
+    },
+    {
+        "name": "Beat Blaine (Event)",
+        "type": "toggle",
+        "img": "images/events/blaine.png",
+        "img_mods": "@disabled",
+        "disabled_img_mods": "none",
+        "codes": "EVENT_BEAT_BLAINE_hosted"
+    },
+    {
+        "name": "Beat Giovanni (Event)",
+        "type": "toggle",
+        "img": "images/events/giovanni.png",
+        "img_mods": "@disabled",
+        "disabled_img_mods": "none",
+        "codes": "EVENT_BEAT_VIRIDIAN_GYM_GIOVANNI_hosted"
+    },
+    {
+        "name": "Gave Oak Parcel (Event)",
+        "type": "toggle",
+        "img": "images/events/oak_parcel.png",
+        "img_mods": "@disabled",
+        "disabled_img_mods": "none",
+        "codes": "EVENT_OAK_GOT_PARCEL_hosted"
+    },
+    {
+        "name": "Win First Rival Fight (Event)",
+        "type": "toggle",
+        "img": "images/events/first_rival.png",
+        "img_mods": "@disabled",
+        "disabled_img_mods": "none",
+        "codes": "EVENT_BEAT_ROUTE22_RIVAL_1ST_BATTLE_hosted"
+    },
+    {
+        "name": "Rescue Fuji (Event)",
+        "type": "toggle",
+        "img": "images/events/fuji.png",
+        "img_mods": "@disabled",
+        "disabled_img_mods": "none",
+        "codes": "EVENT_RESCUED_MR_FUJI_hosted"
+    },
+    {
+        "name": "Help Bill (Event)",
+        "type": "toggle",
+        "img": "images/events/bill.png",
+        "img_mods": "@disabled",
+        "disabled_img_mods": "none",
+        "codes": "EVENT_GOT_SS_TICKET_hosted"
+    },
+    {
+        "name": "Liberate Silph Co (Event)",
+        "type": "toggle",
+        "img": "images/events/giovanni.png",
+        "img_mods": "@disabled",
+        "disabled_img_mods": "none",
+        "codes": "EVENT_BEAT_SILPH_CO_GIOVANNI_hosted"
+    },
+    {
+        "name": "Beat The Game (Event)",
+        "type": "toggle",
+        "img": "images/events/champ.png",
+        "img_mods": "@disabled",
+        "disabled_img_mods": "none",
+        "codes": "EVENT_BEAT_CHAMPION_RIVAL_hosted"
+    }
+]

@@ -190,7 +190,7 @@ end
 
 function toggle_hosted_item(code)
   local active = Tracker:FindObjectForCode(code).Active
-  code = code:gsub("_hosted", "")
+  code = code:gsub("_hosted$", "")
   local object = Tracker:FindObjectForCode(code)
   if object then
     object.Active = active
