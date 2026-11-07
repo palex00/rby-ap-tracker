@@ -1,12 +1,30 @@
 {
     "quick_settings_grid": {
         "type": "array",
-        "orientation": "horizontal",
+        "orientation": "vertical",
         "margin": "2,2",
         "content": [
             {
                 "type": "array",
-                "orientation": "vertical",
+                "orientation": "horizontal",
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "visibility_items",
+                        "margin": "2,2",
+                        "item_size": "32, 32"
+                    },
+                    {
+                        "type": "item",
+                        "item": "visibility_encounters",
+                        "margin": "2,2",
+                        "item_size": "32, 32"
+                    }
+                ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
                 "content": [
                     {
                         "type": "item",
@@ -19,28 +37,16 @@
                         "item": "splitmap",
                         "margin": "2,2",
                         "item_size": "32, 32"
-                    },
-                    {
-                        "type": "item",
-                        "item": "colormap",
-                        "margin": "2,2",
-                        "item_size": "32, 32"
                     }
                 ]
             },
             {
                 "type": "array",
-                "orientation": "vertical",
+                "orientation": "horizontal",
                 "content": [
                     {
                         "type": "item",
-                        "item": "visibility_items",
-                        "margin": "2,2",
-                        "item_size": "32, 32"
-                    },
-                    {
-                        "type": "item",
-                        "item": "visibility_encounters",
+                        "item": "colormap",
                         "margin": "2,2",
                         "item_size": "32, 32"
                     },
