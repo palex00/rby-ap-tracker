@@ -67,6 +67,12 @@
                         "item": "routing_tab",
                         "margin": "2,2",
                         "item_size": "32, 32"
+                    },
+                    {
+                        "type": "item",
+                        "item": "hide_cleared",
+                        "margin": "2,2",
+                        "item_size": "32, 32"
                     }
                 ]
             }
