@@ -1,5 +1,5 @@
 -- Route mode: shortest path between two regions over the current graph. Every edge counts as a
--- hop, but only warps and Fly get printed.
+-- hop, but only warps, Fly and Pallet Warp get printed.
 
 ROUTE_TILE_COUNT = 30
 
@@ -44,9 +44,17 @@ local function flyHops()
     return hops
 end
 
+local function palletWarpHop()
+    local node = NAMED_NODES["Pallet Town"]
+    if usable(node:accessibility()) then
+        return { node = node, label = "Use Pallet Warp in Title Screen Menu" }
+    end
+end
+
 -- breadth-first, so the fewest hops wins; returns the printed hops, or nil
 local function findPath(start, finish)
     local flights = flyHops()
+    local pallet_warp = palletWarpHop()
     local prev = { [start] = false }
     local queue = { start }
     local head = 1
@@ -72,6 +80,9 @@ local function findPath(start, finish)
             for _, hop in ipairs(flights) do
                 steps[#steps + 1] = hop
             end
+        end
+        if pallet_warp then
+            steps[#steps + 1] = pallet_warp
         end
         for _, step in ipairs(steps) do
             if prev[step.node] == nil then
