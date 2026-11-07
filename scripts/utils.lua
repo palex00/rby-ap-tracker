@@ -190,7 +190,7 @@ end
 
 function toggle_hosted_item(code)
   local active = Tracker:FindObjectForCode(code).Active
-  code = code:gsub("_hosted", "")
+  code = code:gsub("_hosted$", "")
   local object = Tracker:FindObjectForCode(code)
   if object then
     object.Active = active
@@ -202,17 +202,46 @@ function toggle_hosted_item(code)
 end
 
 function onMap(value)
-    local automap = Tracker:FindObjectForCode("automap").CurrentStage == 0
-    if automap and value ~= nil and value["data"] ~= nil then
+    if value == nil or value["data"] == nil then
+        return
+    end
+    RouteMapEntered(value["data"]["currentMap"])
+    local stage = Tracker:FindObjectForCode("automap").CurrentStage
+    local mapping = ({MAP_MAPPING_ALL, MAP_MAPPING_MOST, MAP_MAPPING_MINIMUM})[stage + 1]
+    if mapping then
         local map_number = value["data"]["currentMap"]
-        
+
         -- Access correct mapping and activate tabs
-        local tabs = MAP_MAPPING[map_number]
+        local tabs = mapping[map_number]
         
-        for i, tab in ipairs(tabs) do
-            Tracker:UiHint("ActivateTab", tab)
+        if tabs then
+            for i, tab in ipairs(tabs) do
+                Tracker:UiHint("ActivateTab", tab)
+            end
         end
     end
+end
+
+-- AddLayouts rebuilds the whole view, so only load on change
+LOADED_LAYOUTS = {
+    quick_settings = "layouts/settings_quick.json",
+    tabbed_maps = "layouts/tabs_single.json",
+    tabs_meta = "layouts/tabs_meta.json",
+    tabs_submaps = "layouts/tabs_submaps.json",
+}
+local function load_layout(key, path)
+    if LOADED_LAYOUTS[key] ~= path then
+        LOADED_LAYOUTS[key] = path
+        Tracker:AddLayouts(path)
+    end
+end
+
+function er_any()
+    return Tracker:FindObjectForCode("er_doors").CurrentStage > 0 or Tracker:ProviderCountForCode("er_warp_tiles_on") > 0
+end
+
+function toggle_quick_settings()
+    load_layout("quick_settings", er_any() and "layouts/settings_quick_er.json" or "layouts/settings_quick.json")
 end
 
 function toggle_itemgrid()
@@ -293,6 +322,14 @@ function toggle_grayscale()
     else
         print("Oh Oh.")
     end
+    toggle_encounter_map()
+end
+
+-- the overworld shows the encounter map image while encounters are shown
+function toggle_encounter_map()
+    local bw = Tracker:FindObjectForCode("colormap").CurrentStage == 1
+    local shown = Tracker:ProviderCountForCode("show_encounters") > 0
+    Tracker:AddMaps("maps/overworld" .. (bw and "_bw" or "") .. (shown and "_encounters" or "") .. ".json")
 end
 
 function toggle_boulders()
@@ -312,16 +349,33 @@ function toggle_boulders()
     end
 end
 
-function toggle_splitmap()
-    local off = Tracker:FindObjectForCode("splitmap").CurrentStage == 0
-    local on = Tracker:FindObjectForCode("splitmap").CurrentStage == 1
-    local reverse = Tracker:FindObjectForCode("splitmap").CurrentStage == 2
-    
-    if off then
-        Tracker:AddLayouts("layouts/tabs_single.json")
-    elseif on then
-        Tracker:AddLayouts("layouts/tabs_split.json")
-    elseif reverse then
-        Tracker:AddLayouts("layouts/tabs_reverse.json")
+function toggle_extra_key_items()
+    local extra_key = Tracker:FindObjectForCode("opt_extra_key_items").CurrentStage == 1
+    local bw = Tracker:FindObjectForCode("colormap").CurrentStage == 1
+
+    if not bw and not extra_key then
+        Tracker:AddMaps("maps/maps_extrakey_vanilla.json")
+    elseif bw and not extra_key then
+        Tracker:AddMaps("maps/maps_bw_extrakey_vanilla.json")
+    elseif not bw and extra_key then
+        Tracker:AddMaps("maps/maps_extrakey.json")
+    elseif bw and extra_key then
+        Tracker:AddMaps("maps/maps_bw_extrakey.json")
+    else
+        print("Oh Oh.")
     end
+end
+
+-- the Routing tab is only there while some entrance is shuffled
+function toggle_splitmap()
+    local stage = Tracker:FindObjectForCode("splitmap").CurrentStage
+    local routing = er_any() and "_routing" or ""
+    if stage == 0 then
+        load_layout("tabbed_maps", "layouts/tabs_single" .. routing .. ".json")
+        return
+    end
+    local submap_side = Tracker:ProviderCountForCode("routing_tab_submap") > 0
+    load_layout("tabs_meta", "layouts/tabs_meta" .. (submap_side and "" or routing) .. ".json")
+    load_layout("tabs_submaps", "layouts/tabs_submaps" .. (submap_side and routing or "") .. ".json")
+    load_layout("tabbed_maps", "layouts/tabs_" .. (stage == 1 and "split" or "reverse") .. ".json")
 end

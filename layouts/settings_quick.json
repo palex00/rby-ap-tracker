@@ -5,22 +5,58 @@
         "margin": "2,2",
         "content": [
             {
-                "type": "item",
-                "item": "automap",
-                "margin": "2,2",
-                "item_size": "32, 32"
+                "type": "array",
+                "orientation": "horizontal",
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "visibility_items",
+                        "margin": "2,2",
+                        "item_size": "32, 32"
+                    },
+                    {
+                        "type": "item",
+                        "item": "visibility_encounters",
+                        "margin": "2,2",
+                        "item_size": "32, 32"
+                    }
+                ]
             },
             {
-                "type": "item",
-                "item": "splitmap",
-                "margin": "2,2",
-                "item_size": "32, 32"
+                "type": "array",
+                "orientation": "horizontal",
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "automap",
+                        "margin": "2,2",
+                        "item_size": "32, 32"
+                    },
+                    {
+                        "type": "item",
+                        "item": "splitmap",
+                        "margin": "2,2",
+                        "item_size": "32, 32"
+                    }
+                ]
             },
             {
-                "type": "item",
-                "item": "colormap",
-                "margin": "2,2",
-                "item_size": "32, 32"
+                "type": "array",
+                "orientation": "horizontal",
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "colormap",
+                        "margin": "2,2",
+                        "item_size": "32, 32"
+                    },
+                    {
+                        "type": "item",
+                        "item": "hide_cleared",
+                        "margin": "2,2",
+                        "item_size": "32, 32"
+                    }
+                ]
             }
         ]
     }

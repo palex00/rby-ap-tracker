@@ -1,0 +1,1352 @@
+[
+    {
+        "name": "ER Linking",
+        "visibility_rules": [
+            "er_linking_active"
+        ],
+        "sections": [
+            {
+                "name": "Abort ER Linking",
+                "hosted_item": "er_abort"
+            },
+            {
+                "name": "Clear this mapping",
+                "hosted_item": "er_clear_link"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "map",
+                "x": 624,
+                "y": 16,
+                "shape": "diamond"
+            },
+            {
+                "map": "agathasroom",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "bikeshop",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "billshouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "blueshouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "brunosroom",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadonchiefhouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadoncity",
+                "x": 788,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadondiner",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadongym",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadonhotel",
+                "x": 212,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadonmansion1f",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadonmansion2f",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadonmansion3f",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadonmansionroof",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadonmansionroofhouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadonmart1f",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadonmart2f",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadonmart3f",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadonmart4f",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadonmart5f",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadonmartelevator",
+                "x": 52,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadonmartroof",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "celadonpokecenter",
+                "x": 212,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "ceruleanbadgehouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "ceruleancave1f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "ceruleancave2f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "ceruleancaveb1f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "ceruleancity",
+                "x": 628,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "ceruleangym",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "ceruleanmart",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "ceruleanpokecenter",
+                "x": 212,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "ceruleantradehouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "ceruleantrashedhouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "championsroom",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "cinnabargym",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "cinnabarisland",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "cinnabarlab",
+                "x": 276,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "cinnabarlabfossilroom",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "cinnabarlabmetronomeroom",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "cinnabarlabtraderoom",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "cinnabarmart",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "cinnabarpokecenter",
+                "x": 212,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "copycatshouse1f",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "copycatshouse2f",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "daycare",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "diglettscave",
+                "x": 628,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "diglettscaveroute11",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "diglettscaveroute2",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "fightingdojo",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "fuchsiabillsgrandpashouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "fuchsiacity",
+                "x": 628,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "fuchsiagoodrodhouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "fuchsiagym",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "fuchsiamart",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "fuchsiameetingroom",
+                "x": 212,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "fuchsiapokecenter",
+                "x": 212,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "gamecorner",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "gamecornerprizeroom",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "halloffame",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "indigoplateau",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "indigoplateaulobby",
+                "x": 244,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "lancesroom",
+                "x": 404,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "lavendercubonehouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "lavendermart",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "lavenderpokecenter",
+                "x": 212,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "lavendertown",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "loreleisroom",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "mrfujishouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "mrpsychicshouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "mtmoon1f",
+                "x": 628,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "mtmoonb1f",
+                "x": 436,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "mtmoonb2f",
+                "x": 628,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "mtmoonpokecenter",
+                "x": 212,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "museum1f",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "museum2f",
+                "x": 212,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "nameratershouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "oakslab",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pallettown",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pewtercity",
+                "x": 628,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pewtergym",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pewtermart",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pewternidoranhouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pewterpokecenter",
+                "x": 212,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pewterspeechhouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pokemonfanclub",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pokemonmansion1f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pokemonmansion2f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pokemonmansion3f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pokemonmansionb1f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pokemontower1f",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pokemontower2f",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pokemontower3f",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pokemontower4f",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pokemontower5f",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pokemontower6f",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "pokemontower7f",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "powerplant",
+                "x": 628,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "redshouse1f",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "redshouse2f",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "rockethideoutb1f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "rockethideoutb2f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "rockethideoutb3f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "rockethideoutb4f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "rockethideoutelevator",
+                "x": 84,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "rocktunnel1f",
+                "x": 628,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "rocktunnelpokecenter",
+                "x": 212,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route1",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route10",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route11gate1f",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route11gate2f",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route12_top",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route12_bottom",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route12gate1f",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route12gate2f",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route12superrodhouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route14",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route15",
+                "x": 948,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route15gate1f",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route15gate2f",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route16",
+                "x": 628,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route16flyhouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route16gate1f",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route16gate2f",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route17_top",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route17_bottom",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route18",
+                "x": 788,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route18gate1f",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route18gate2f",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route19",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route22gate",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route2_top",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route2_bottom",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route20",
+                "x": 1588,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route21",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route22",
+                "x": 628,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route23_top",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route23_bottom",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route24",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route25",
+                "x": 948,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route2gate",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route2tradehouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route3",
+                "x": 1108,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route4",
+                "x": 1428,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route5",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route5gate",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route6",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route6gate",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route7",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route7gate",
+                "x": 84,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route8",
+                "x": 948,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route8gate",
+                "x": 84,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route9",
+                "x": 948,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "safarizonecenter",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "safarizonecenterresthouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "safarizoneeast",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "safarizoneeastresthouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "safarizonegate",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "safarizonenorth",
+                "x": 628,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "safarizonenorthresthouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "safarizonesecrethouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "safarizonewest",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "safarizonewestresthouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "saffroncity",
+                "x": 628,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "saffrongym",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "saffronmart",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "saffronpidgeyhouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "saffronpokecenter",
+                "x": 212,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "seafoamislands1f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "seafoamislandsb1f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "seafoamislandsb2f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "seafoamislandsb3f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "seafoamislandsb4f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "silphco10f",
+                "x": 244,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "silphco11f",
+                "x": 276,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "silphco1f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "silphco2f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "silphco3f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "silphco4f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "silphco5f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "silphco6f",
+                "x": 404,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "silphco7f",
+                "x": 404,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "silphco8f",
+                "x": 404,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "silphco9f",
+                "x": 404,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "silphcoelevator",
+                "x": 52,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "ssanne1f",
+                "x": 628,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "ssanne2f",
+                "x": 628,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "ssanne3f",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "ssanneb1f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "ssannebow",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "ssannecaptainsroom",
+                "x": 84,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "ssannekitchen",
+                "x": 212,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "undergroundpathnorthsouth",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "undergroundpathroute5",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "undergroundpathroute6",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "undergroundpathroute7",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "undergroundpathroute8",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "undergroundpathwesteast",
+                "x": 788,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "vermilioncity",
+                "x": 628,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "vermiliondock",
+                "x": 436,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "vermiliongym",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "vermilionmart",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "vermilionoldrodhouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "vermilionpidgeyhouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "vermilionpokecenter",
+                "x": 212,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "vermiliontradehouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "victoryroad1f",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "victoryroad2f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "victoryroad3f",
+                "x": 468,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "viridiancity",
+                "x": 628,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "viridianforest",
+                "x": 532,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "viridianforestnorthgate",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "viridianforestsouthgate",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "viridiangym",
+                "x": 308,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "viridianmart",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "viridiannicknamehouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "viridianpokecenter",
+                "x": 212,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "viridianschoolhouse",
+                "x": 116,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "wardenshouse",
+                "x": 148,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route11",
+                "x": 948,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "route13",
+                "x": 948,
+                "y": 12,
+                "shape": "diamond"
+            },
+            {
+                "map": "rocktunnelb1f",
+                "x": 628,
+                "y": 12,
+                "shape": "diamond"
+            }
+        ]
+    }
+]

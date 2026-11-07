@@ -13,20 +13,24 @@
                 }
             },
             {
-                "title": "Submaps",
+                "title": "Cities",
                 "content": {
                     "type": "layout",
-                    "key": "submaps"
+                    "key": "submaps_cities"
                 }
             },
             {
-                "title": "Encounters",
-                "icon": "images/items/encounter_icon.png",
+                "title": "Routes",
                 "content": {
-                    "type": "map",
-                    "maps": [
-                        "encounters"
-                    ]
+                    "type": "layout",
+                    "key": "submaps_routes"
+                }
+            },
+            {
+                "title": "Dungeons",
+                "content": {
+                    "type": "layout",
+                    "key": "submaps_dungeons"
                 }
             },
             {

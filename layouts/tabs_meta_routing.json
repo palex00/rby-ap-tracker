@@ -1,0 +1,46 @@
+{
+    "tabs_meta": {
+        "type": "tabbed",
+        "tabs": [
+            {
+                "title": "Kanto",
+                "icon": "images/items/townmap.png",
+                "content": {
+                    "type": "dock",
+                    "content": {
+                        "type": "map",
+                        "maps": [
+                            "map"
+                        ]
+                    }
+                }
+            },
+            {
+                "title": "Pokedex",
+                "icon": "images/items/pokedex.png",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "pokedex"
+                    ]
+                }
+            },
+            {
+                "title": "Routing",
+                "content": {
+                    "type": "layout",
+                    "key": "routing"
+                }
+            },
+            {
+                "title": "Credits",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "credits"
+                    ]
+                }
+            }
+        ]
+    }
+}

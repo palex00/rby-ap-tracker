@@ -33,13 +33,6 @@ function pokedex_count()
     return (100 * hundreds) + (10 * tens) + ones
 end
 
--- returns whether we have enough fossils for a second check
-function enough_fossils()
-    local fossils = Tracker:ProviderCountForCode("fossil")
-    local fossils_req = Tracker:FindObjectForCode('opt_fossilcheck').AcquiredCount
-    return fossils >= fossils_req
-end
-
 -- HM CHECKS
 
 --a table for lookups
@@ -89,6 +82,7 @@ function cardkey(floor)
     if has_new("cardkey") or has_new("cardkey"..floor.."f") or (Tracker:FindObjectForCode("cardkey_progressive").CurrentStage >= floor-1) then
         return AccessibilityLevel.Normal
     end
+    return AccessibilityLevel.None
 end
 
 function hidden()
@@ -146,16 +140,45 @@ function officer()
     end
 end
 
--- LOCATION ACCESS CHECKS
-function tea()
-    local celadon = Tracker:FindObjectForCode("@Kanto/Celadon City").AccessibilityLevel
-    
+-- REGION GRAPH CHECKS
+-- These run inside the CanReach flood fill (connections.lua), so they read other regions
+-- through reach(), never through a location's AccessibilityLevel.
+
+-- Saffron's gate guards: Tea, or a drink from the Celadon Department Store roof vending machines.
+function pass_guards()
     if has_new("opt_tea_on") then
         return has("tea")
-    else
-        return celadon
     end
+    return reach("Celadon Department Store Roof")
 end
+
+-- Leaving a Silph Co / Celadon Department Store elevator.
+function elevator_unlocked()
+    return max(has("opt_elevators_locked_off"), has("liftkey"))
+end
+
+-- The six Seafoam Exit Boulder events: every boulder room must be reachable.
+function seafoam_exit_boulders()
+    return ALL(
+        reach("Seafoam Islands 1F"),
+        reach("Seafoam Islands B1F"),
+        reach("Seafoam Islands B1F-NE"),
+        reach("Seafoam Islands B2F-NW"),
+        reach("Seafoam Islands B2F-NE")
+    )
+end
+
+-- The apworld's fossil_checks() for the second fossil check: the Mt Moon fossil, the Cinnabar
+-- Lab and Cinnabar Island events, plus as many fossils as the second fossil check condition.
+function fossil_checks()
+    local fossils_req = Tracker:FindObjectForCode("opt_fossilcheck").AcquiredCount
+    if Tracker:ProviderCountForCode("fossil") < fossils_req then
+        return AccessibilityLevel.None
+    end
+    return ALL(reach("Mt Moon B2F"), reach("Cinnabar Lab"), reach("Cinnabar Island"))
+end
+
+-- LOCATION ACCESS CHECKS
 
 function gyms()
     return
@@ -251,20 +274,6 @@ function ceruleancave()
     local key_item_req = 10 * tens + ones
     if key_items_count() >= key_item_req and badges_count() >= badge_req then
         return AccessibilityLevel.Normal
-    end
-    return AccessibilityLevel.None
-end
-
-function fossils()
-	local er = has("opt_er_on")
-    local mt_moon = Tracker:FindObjectForCode("@Kanto/Mt Moon").AccessibilityLevel
-    local cinnabar = Tracker:FindObjectForCode("@Kanto/Cinnabar Island").AccessibilityLevel
-    
-    if mt_moon == AccessibilityLevel.Normal or er == AccessibilityLevel.Normal then
-        if (cinnabar == AccessibilityLevel.Normal or er == AccessibilityLevel.Normal) and enough_fossils() then
-            return AccessibilityLevel.Normal
-        end
-        return AccessibilityLevel.SequenceBreak
     end
     return AccessibilityLevel.None
 end

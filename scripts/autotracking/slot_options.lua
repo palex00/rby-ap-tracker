@@ -24,7 +24,8 @@ STAGE_CODES = {
     require_pokedex = "opt_dex_required",
     area_1_to_1_mapping = "opt_encounter",
     split_card_key = "opt_cardkey",
-    exp_all = "opt_exp_all"
+    exp_all = "opt_exp_all",
+    all_elevators_locked = "opt_elevators_locked"
 }
 
 AMOUNT_CODES = {
@@ -36,14 +37,13 @@ AMOUNT_CODES = {
 
 IGNORED_CODES = {
     -- Unimplemented because logic irrelevant for Poptracker
-    all_elevators_locked = "",
     type_chart = "",
     v5_update = "",
     death_link = "",
-    warp_tile_shuffle = "",
-    door_shuffle = "",
     
     -- Special handling for these
+    door_shuffle = "",
+    warp_tile_shuffle = "",
     old_man = "",
     elite_four_pokedex_condition = "",
     elite_four_key_items_condition = "",
@@ -161,4 +161,23 @@ function get_slot_options(slot_data)
 			Tracker:FindObjectForCode('opt_blind_trainers').CurrentStage = 0
 		end
 	end
+
+	if slot_data["door_shuffle"] and slot_data["door_shuffle"] > 0 then
+		Tracker:FindObjectForCode('automap').CurrentStage = 0
+	end
+
+	-- Full and Insanity shuffle the same doors
+	if slot_data["door_shuffle"] then
+		local stages = { [0] = 0, 1, 2, 3, 3, 4 }
+		Tracker:FindObjectForCode('er_doors').CurrentStage = stages[slot_data["door_shuffle"]]
+	end
+
+	if slot_data["warp_tile_shuffle"] then
+		Tracker:FindObjectForCode('er_warp_tiles').CurrentStage = slot_data["warp_tile_shuffle"] > 0 and 1 or 0
+	end
+
+	-- visibility stages: 0 = Show, 1 = Hide
+	local any_er = (slot_data["door_shuffle"] or 0) > 0 or (slot_data["warp_tile_shuffle"] or 0) > 0
+	Tracker:FindObjectForCode('visibility_entrances').CurrentStage = any_er and 0 or 1
+	Tracker:FindObjectForCode('visibility_items').CurrentStage = 0
 end

@@ -7,6 +7,7 @@ CUR_INDEX = -1
 SLOT_DATA = nil
 LOCAL_ITEMS = {}
 GLOBAL_ITEMS = {}
+STORE_STONES = { "leafstone", "thunderstone", "waterstone", "firestone" }
 
 function onClear(slot_data)
 
@@ -17,6 +18,26 @@ function onClear(slot_data)
     CUR_INDEX = -1
     PLAYER_ID = Archipelago.PlayerNumber or -1
     TEAM_NUMBER = Archipelago.TeamNumber or 0
+    -- without stonesanity the store stones are marked by hand, so they are kept per slot
+    local stones = {}
+    for _, code in ipairs(STORE_STONES) do
+        if Tracker:FindObjectForCode(code).Active then
+            table.insert(stones, code)
+        end
+    end
+    local status, stored = ER_STATE:adoptSeed(Archipelago.Seed .. "_" .. TEAM_NUMBER .. "_" .. PLAYER_ID,
+        { stones = stones, encounters = GetEncounterMarks() })
+    if status == "switched" then
+        SetEncounterMarks(stored and stored.encounters)
+    end
+    local restore_stones = nil
+    if slot_data["stonesanity"] == 0 then
+        if status == "same" then
+            restore_stones = stones
+        elseif stored then
+            restore_stones = stored.stones
+        end
+    end
     
     -- reset locations
     for _, v in pairs(LOCATION_MAPPING) do
@@ -59,6 +80,9 @@ function onClear(slot_data)
             end
         end
     end
+    for _, code in ipairs(restore_stones or {}) do
+        Tracker:FindObjectForCode(code).Active = true
+    end
 
     for k, v in pairs(slot_data) do
         if STAGE_CODES[k] then
@@ -88,6 +112,7 @@ function onClear(slot_data)
     
     trainersanity_init(ap_locations)
     dexsanity_init(ap_locations)
+    Tracker:FindObjectForCode("visibility_encounters").CurrentStage = Tracker:FindObjectForCode("opt_dexsanity").CurrentStage > 0 and 0 or 1
 
     if PLAYER_ID>-1 then
         updateEvents(0)
