@@ -11,7 +11,7 @@ Just download the lastest release and put it in your packs folder.
 ## Explanations
 
 ### Event Tracking
-As of AP 0.6.4, this tracker tracks in-game Events automatically.
+As of AP 0.6.4, this tracker tracks in-game Events automatically. Purchasing the stones in the Celadon Dept. Store with disabled Stonesanity is still manual.
 
 ### Encounter & Pokédex Related
 The tracker can currently not track which Pokémon you have obtained or where which Pokémon is. It will show you what Pokémon are Dexsanity Checks and which dexsanity checks have been sent out already.
@@ -21,7 +21,33 @@ When shown, every submap that contains encounters will have a diamond in the top
 
 This is **entirely manual tracking**, however if you do not click "Reset" your progress will be saved between sessions based on your Seed-ID and you do not need to export / import, even when switching room. I recommend it to be save though.
 
-Encounters live on the normal Kanto map and the submaps. Use the "Show / Hide Encounters" toggle in the Tools column: while they are shown, the Kanto map switches to the encounter map, every area lists its encounters, each submap with wild Pokémon (or Super Rod fishing) gets a diamond in its top-left corner (one per floor in dungeons), and static Pokémon, in-game trades, fossil revivals and Prize Corner Pokémon get a diamond where they are.
+### (Manual) Entrance Tracking / Door Tracking
+This tracker features accurate entrance tracking which, however, is **manual**.
+
+It will automatically determine your Door Shuffle Mode for your slot and show / hide entrances based on that. Entrances are shown as trapezoids. Vanilla entrances still have their overview-squares.
+
+**Linking Mode**
+To link two entrances, left-click the first entrance ("from") and then the second entrance ("to"). You need to specifically click the "Entrance"-image on the Entrance location that appears when hovering over the square / trapezoid.
+This also works with Decoupled Mode, it is direction-sensitive.
+To cancel an active linking-in-progress or to clear a specific mapping, you can click on the options in the ER-Linking diamond which appears everywhere once you entered Linking Mode. 
+
+**Routing Mode**
+You can right-click an entrance ("from") and then a second entrance ("to") to active Routing Mode. This will tell you which entrances to take to go from Entrance A to Entrance B.
+If you right-click the same entrance twice, the routing will start from Pallet Town.
+In this mode, the entrances you need to traverse will also blink.
+Routing Mode considers Fly and Returning to Home if it is a faster alternative then normal walking.
+
+**ER-Tools**
+You can hover over any of these to get a short description in the top-right corner of poptracker. But to shortly explain:
+- HM Fly-Icon: Whether Routing can tell you to Fly to a place. Poptracker doesn't know if you've been to a town yet so if you want to know how something has come into logic in the first place, turn this off so it doesn't tell you to just Fly to it, like an Idiot.
+- "ER" with an arrow around it: This clears all ER connections without being able to restore them. Do this at the start of a new slot. This is not restorable.
+- RTNG: Whether the "Routing"-tab appears over the Overworld Map or the Submap Maps.
+- Entrance Icon: Hide / Show all Entrances
+- Auto-Track Map. This tabs you to the submaps you are on with certain guidelines:
+  - MOST: Tabs to all submaps that have checks
+  - MIN: Tabs to all submaps that have more than one check (legacy behavior)
+  - OFF: Does not tab you
+  - ALL: Tabs to all submaps (automatically chosen when Door Shuffle is detected in your slot)
 
 ## ROADMAP
 With support from Alchav and GerbilJames I will bring this Tracker more up to par with the Crystal, FRLG and Emerald one. Features soon to be added include:
