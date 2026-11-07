@@ -112,6 +112,7 @@ function onClear(slot_data)
     
     trainersanity_init(ap_locations)
     dexsanity_init(ap_locations)
+    Tracker:FindObjectForCode("visibility_encounters").CurrentStage = Tracker:FindObjectForCode("opt_dexsanity").CurrentStage > 0 and 0 or 1
 
     if PLAYER_ID>-1 then
         updateEvents(0)

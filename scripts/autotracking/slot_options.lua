@@ -175,4 +175,9 @@ function get_slot_options(slot_data)
 	if slot_data["warp_tile_shuffle"] then
 		Tracker:FindObjectForCode('er_warp_tiles').CurrentStage = slot_data["warp_tile_shuffle"] > 0 and 1 or 0
 	end
+
+	-- visibility stages: 0 = Show, 1 = Hide
+	local any_er = (slot_data["door_shuffle"] or 0) > 0 or (slot_data["warp_tile_shuffle"] or 0) > 0
+	Tracker:FindObjectForCode('visibility_entrances').CurrentStage = any_er and 0 or 1
+	Tracker:FindObjectForCode('visibility_items').CurrentStage = 0
 end
