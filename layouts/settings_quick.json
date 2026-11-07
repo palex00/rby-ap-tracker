@@ -34,6 +34,12 @@
                 "content": [
                     {
                         "type": "item",
+                        "item": "visibility_items",
+                        "margin": "2,2",
+                        "item_size": "32, 32"
+                    },
+                    {
+                        "type": "item",
                         "item": "visibility_encounters",
                         "margin": "2,2",
                         "item_size": "32, 32"

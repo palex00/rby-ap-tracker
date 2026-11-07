@@ -1515,6 +1515,28 @@
         ]
     },
     {
+        "name": "Visibility: Locations",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "stages": [
+            {
+                "name": "Show Locations",
+                "img": "images/items/itemicon.png",
+                "img_mods": "overlay|images/overlays/show.png",
+                "codes": "visibility_items, show_items",
+                "inherit_codes": false
+            },
+            {
+                "name": "Hide Locations (except encounters and entrances)",
+                "img": "images/items/itemicon_opened.png",
+                "img_mods": "overlay|images/overlays/hide.png",
+                "codes": "visibility_items",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
         "name": "Visibility: Entrances",
         "type": "progressive",
         "loop": true,
