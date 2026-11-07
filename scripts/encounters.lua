@@ -1,4 +1,4 @@
--- encounter sections are tracked by hand, a new seed starts them fresh
+-- encounter sections are tracked by hand and kept per slot, a new seed starts them fresh
 
 ENCOUNTER_SECTIONS = {
     "@Kanto/Route 12 South/Pokémon 1:1",
@@ -148,13 +148,45 @@ ENCOUNTER_SECTIONS = {
     "@Kanto/Fishing Is Fun/Super Rod (Route 19/20/21/Cinnabar/Seafoam Island)",
     "@Kanto/Fishing Is Fun/Super Rod (Route 23 & Cerulean Cave)",
     "@Kanto/Fishing Is Fun/Super Rod (Fuchsia)",
+    "@Kanto/Vermilion City/Trade",
+    "@Kanto/Celadon City/Static Encounter: Eevee",
+    "@Kanto/Route 2/Trade",
+    "@Kanto/Cerulean City/Trade",
+    "@Kanto/Route 11-12 Gatehouse/Trade",
+    "@Kanto/Silph Co 7F - 11F/Static Encounter: Lapras",
+    "@Kanto/Route 16/Static Encounter: Snorlax",
+    "@Kanto/Saffron City/Static Encounter: Hitmonlee",
+    "@Kanto/Saffron City/Static Encounter: Hitmonchan",
+    "@Kanto/Cerulean Cave/Static Encounter: Mewtwo",
+    "@Kanto/Power Plant/Static Encounter: Zapdos",
+    "@Kanto/Victory Road/Static Encounter: Moltres",
+    "@Kanto/Seafoam Islands/Static Encounter: Articuno",
+    "@Kanto/Underground Tunnel North-South/Trade",
+    "@Kanto/S.S. Anne/Static Encounter: Mew",
+    "@Kanto/Route 18/Trade",
+    "@Kanto/Route 12/Static Encounter: Snorlax",
+    "@Kanto/Route 3/Static Encounter: Buy Magikarp",
 }
 
-function ClearEncounterMarks()
+-- section code -> AvailableChestCount, only for sections with marks
+function GetEncounterMarks()
+    local marks = {}
+    for _, code in ipairs(ENCOUNTER_SECTIONS) do
+        local section = Tracker:FindObjectForCode(code)
+        if section and section.AvailableChestCount < section.ChestCount then
+            marks[code] = section.AvailableChestCount
+        end
+    end
+    return marks
+end
+
+-- unmarks every encounter section, then applies marks from GetEncounterMarks
+function SetEncounterMarks(marks)
+    marks = marks or {}
     for _, code in ipairs(ENCOUNTER_SECTIONS) do
         local section = Tracker:FindObjectForCode(code)
         if section then
-            section.AvailableChestCount = section.ChestCount
+            section.AvailableChestCount = marks[code] or section.ChestCount
         end
     end
 end

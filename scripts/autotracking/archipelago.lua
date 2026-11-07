@@ -7,6 +7,7 @@ CUR_INDEX = -1
 SLOT_DATA = nil
 LOCAL_ITEMS = {}
 GLOBAL_ITEMS = {}
+STORE_STONES = { "leafstone", "thunderstone", "waterstone", "firestone" }
 
 function onClear(slot_data)
 
@@ -17,8 +18,25 @@ function onClear(slot_data)
     CUR_INDEX = -1
     PLAYER_ID = Archipelago.PlayerNumber or -1
     TEAM_NUMBER = Archipelago.TeamNumber or 0
-    if ER_STATE:adoptSeed(Archipelago.Seed .. "_" .. TEAM_NUMBER .. "_" .. PLAYER_ID) then
-        ClearEncounterMarks()
+    -- without stonesanity the store stones are marked by hand, so they are kept per slot
+    local stones = {}
+    for _, code in ipairs(STORE_STONES) do
+        if Tracker:FindObjectForCode(code).Active then
+            table.insert(stones, code)
+        end
+    end
+    local status, stored = ER_STATE:adoptSeed(Archipelago.Seed .. "_" .. TEAM_NUMBER .. "_" .. PLAYER_ID,
+        { stones = stones, encounters = GetEncounterMarks() })
+    if status == "switched" then
+        SetEncounterMarks(stored and stored.encounters)
+    end
+    local restore_stones = nil
+    if slot_data["stonesanity"] == 0 then
+        if status == "same" then
+            restore_stones = stones
+        elseif stored then
+            restore_stones = stored.stones
+        end
     end
     
     -- reset locations
@@ -61,6 +79,9 @@ function onClear(slot_data)
                 print(string.format("onClear: could not find object for code %s", v[1]))
             end
         end
+    end
+    for _, code in ipairs(restore_stones or {}) do
+        Tracker:FindObjectForCode(code).Active = true
     end
 
     for k, v in pairs(slot_data) do

@@ -73,6 +73,9 @@ function ErState:init()
     self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/options/er.png")
     self.stamp = nil
     self.pending = nil
+    -- earlier slots by stamp, oldest first in slotOrder; the current slot lives in the tracker itself
+    self.slots = {}
+    self.slotOrder = {}
 end
 
 function ErState:canProvideCode(code)
@@ -106,30 +109,64 @@ function ErState:setPending(item)
     self:touch()
 end
 
--- links made before the first connect are kept; returns true for a different seed
-function ErState:adoptSeed(stamp)
-    local changed = self.stamp ~= nil and self.stamp ~= stamp
-    if changed then
-        self:setPending(nil)
-        ErClearAll()
+local SLOT_MEMORY = 10
+
+function ErState:forgetSlot(stamp)
+    self.slots[stamp] = nil
+    for i, s in ipairs(self.slotOrder) do
+        if s == stamp then
+            table.remove(self.slotOrder, i)
+            break
+        end
     end
+end
+
+function ErState:rememberSlot(stamp, data)
+    self:forgetSlot(stamp)
+    self.slots[stamp] = data
+    table.insert(self.slotOrder, stamp)
+    while #self.slotOrder > SLOT_MEMORY do
+        self.slots[table.remove(self.slotOrder, 1)] = nil
+    end
+end
+
+local function setLinks(links)
+    ER_LINKS = {}
+    for from, to in pairs(links or {}) do
+        ER_LINKS[from] = to
+    end
+    rebuildReverse()
+    linksChanged()
+end
+
+-- returns "first", "same" or "switched", plus the extra data stored for a switched-to slot.
+-- links made before the first connect are kept; on a switch the old slot's links and extra are stored.
+function ErState:adoptSeed(stamp, extra)
+    local old = self.stamp
     self.stamp = stamp
-    return changed
+    if old == nil then
+        return "first"
+    elseif old == stamp then
+        return "same"
+    end
+    self:setPending(nil)
+    self:rememberSlot(old, { links = ER_LINKS, extra = extra })
+    local stored = self.slots[stamp]
+    self:forgetSlot(stamp)
+    setLinks(stored and stored.links)
+    return "switched", stored and stored.extra
 end
 
 function ErState:save()
-    return { stamp = self.stamp, links = ER_LINKS }
+    return { stamp = self.stamp, links = ER_LINKS, slots = self.slots, slotOrder = self.slotOrder }
 end
 
 function ErState:load(data)
     self:setPending(nil)
     self.stamp = data.stamp
-    ER_LINKS = {}
-    for from, to in pairs(data.links) do
-        ER_LINKS[from] = to
-    end
-    rebuildReverse()
-    linksChanged()
+    self.slots = data.slots or {}
+    self.slotOrder = data.slotOrder or {}
+    setLinks(data.links)
     -- section highlights get restored after the items, clear any left from a pending link
     ScriptHost:AddOnFrameHandler("er stale glow", function()
         ScriptHost:RemoveOnFrameHandler("er stale glow")
