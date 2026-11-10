@@ -26,18 +26,18 @@ for i = 1, 25 do
     FLY_MAPS["Route " .. i] = true
 end
 
-local function usable(level)
-    return (level or ACCESS_NONE) >= ACCESS_SEQUENCEBREAK
+local function usable(level, min)
+    return (level or ACCESS_NONE) >= min
 end
 
-local function flyHops()
+local function flyHops(level)
     local hops = {}
-    if Tracker:ProviderCountForCode("er_no_fly_on") > 0 or not usable(fly()) then
+    if Tracker:ProviderCountForCode("er_no_fly_on") > 0 or not usable(fly(), level) then
         return hops
     end
     for _, town in ipairs(FLY_TOWNS) do
         local node = NAMED_NODES[town]
-        if usable(node:accessibility()) then
+        if usable(node:accessibility(), level) then
             hops[#hops + 1] = { node = node, label = "Fly: " .. town }
         end
     end
@@ -46,14 +46,15 @@ end
 
 local function palletWarpHop()
     local node = NAMED_NODES["Pallet Town"]
-    if usable(node:accessibility()) then
+    if usable(node:accessibility(), ACCESS_SEQUENCEBREAK) then
         return { node = node, label = "Use Pallet Warp in Title Screen Menu" }
     end
 end
 
 -- breadth-first, so the fewest hops wins; returns the printed hops, or nil
-local function findPath(start, finish)
-    local flights = flyHops()
+-- level: the lowest access level an edge or Fly hop may have
+local function findPath(start, finish, level)
+    local flights = flyHops(level)
     local pallet_warp = palletWarpHop()
     local prev = { [start] = false }
     local queue = { start }
@@ -68,7 +69,7 @@ local function findPath(start, finish)
                 target = WarpDetourTarget(exit[5])
                 rule = exit[6]
             end
-            if prev[target] == nil and usable(target:accessibility()) and usable(rule()) then
+            if prev[target] == nil and usable(target:accessibility(), ACCESS_SEQUENCEBREAK) and usable(rule(), level) then
                 if exit[3] then
                     steps[#steps + 1] = { node = target, label = ENTRANCE_REGISTRY[exit[5]].pretty, token = exit[5] }
                 else
@@ -267,7 +268,13 @@ function GetRoute(start, finish, start_tab)
     end
     StopRouting()
     CanReach("Entry_point")
-    local hops, path = findPath(start, finish)
+    local hops, path
+    for _, level in ipairs({ ACCESS_NORMAL, ACCESS_SEQUENCEBREAK }) do
+        hops, path = findPath(start, finish, level)
+        if hops then
+            break
+        end
+    end
     if hops ~= nil and start ~= finish then
         ARRIVAL_MAP, ARRIVALS_LEFT = countArrivals(path)
         if ARRIVALS_LEFT == 0 then
